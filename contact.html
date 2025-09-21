@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>قرصة نحلة - تواصل معنا</title>
+  <meta name="description" content="طرق التواصل مع قرصة نحلة: الهاتف، واتساب، العنوان ونموذج مراسلة" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="icon" type="image/x-icon" href="imgs/logo.ico">
+</head>
+<body>
+  <!-- الشريط العلوي -->
+  <header class="topbar">
+    <nav class="container topbar__inner">
+      <div class="brand nav-left" aria-label="الشعار">
+        <a href="index.html"><img src="imgs/logo.jpeg" alt="" class="brand-logo" viewBox="0 0 64 64" width="44" height="44" aria-hidden="true"></a>
+        <form id="navSearchForm" class="nav-search" action="index.html" role="search">
+          <i class="fa-solid fa-magnifying-glass nav-search__icon" aria-hidden="true"></i>
+          <label for="navSearchInput" class="visually-hidden">بحث</label>
+          <input id="navSearchInput" name="q" class="nav-search__input" type="search" placeholder="ابحث عن منتج..." autocomplete="off" />
+        </form>
+      </div>
+      <div class="nav-center">
+        <ul class="breadcrumb">
+          <li><a href="index.html">الرئيسية</a></li>
+          <li><a href="honey.html">العسل</a></li>
+          <li><a href="herbs.html">الأعشاب</a></li>
+          <li><a href="oils.html">الزيوت</a></li>
+          <li><a href="mixes.html">الخلطات</a></li>
+          <li><a href="contact.html" aria-current="page">تواصل معنا</a></li>
+        </ul>
+      </div>
+      <div class="nav-right">
+        <button class="menu-toggle" aria-label="فتح القائمة" aria-controls="sideMenu" aria-expanded="false">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <button class="cart" aria-label="سلة المشتريات">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span class="cart__badge" aria-hidden="true">0</span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- قائمة الهاتف -->
+  <aside id="sideMenu" class="side-menu" aria-hidden="true" tabindex="-1">
+    <div class="side-menu__panel" role="dialog" aria-label="القائمة">
+      <div class="side-menu__header">
+        <span class="side-menu__title">القائمة</span>
+        <button class="side-menu__close" aria-label="إغلاق القائمة">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <ul class="side-menu__list">
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="honey.html">العسل</a></li>
+        <li><a href="herbs.html">الأعشاب</a></li>
+        <li><a href="oils.html">الزيوت</a></li>
+        <li><a href="mixes.html">الخلطات</a></li>
+        <li><a href="contact.html" aria-current="page">تواصل معنا</a></li>
+      </ul>
+    </div>
+    <div class="side-menu__backdrop" aria-hidden="true"></div>
+  </aside>
+
+  <!-- عنوان الصفحة -->
+  <section class="section-pad" aria-labelledby="contactTitle">
+    <div class="container">
+      <h1 id="contactTitle" class="section-title">تواصل معنا</h1>
+      <p class="section-subtitle">نسعد بخدمتكم والرد على استفساراتكم واقتراحاتكم</p>
+
+      <!-- شبكة معلومات + نموذج -->
+      <div class="contact-grid">
+        <!-- نموذج المراسلة -->
+        <section class="contact-card contact-card--form">
+          <h2>أرسل رسالة</h2>
+          <form id="contactForm" action="#" method="post" novalidate>
+            <div style="display:grid; gap:.9rem;">
+              <div class="form-field">
+                <input id="name" name="name" type="text" class="input" required placeholder=" ">
+                <label for="name">الاسم</label>
+              </div>
+              <div class="form-field">
+                <input id="phone" name="phone" type="tel" class="input" placeholder=" ">
+                <label for="phone">الهاتف</label>
+              </div>
+              <div class="form-field">
+                <input id="email" name="email" type="email" class="input" placeholder=" ">
+                <label for="email">البريد الإلكتروني</label>
+              </div>
+              <div class="form-field">
+                <textarea id="message" name="message" rows="5" class="textarea" required placeholder=" "></textarea>
+                <label for="message">الرسالة</label>
+              </div>
+              <button type="submit" class="btn btn--add" style="width:auto; align-self:start;">إرسال</button>
+            </div>
+          </form>
+        </section>
+
+        <!-- معلومات التواصل -->
+        <section class="contact-card">
+          <h2>معلومات التواصل</h2>
+          <ul class="contact-info-list">
+            <li><i class="fa-solid fa-phone" style="margin-inline-start:.25rem; color:#0f172a"></i> هاتف: <a href="tel:+201234567890" style="text-decoration:none; color:#0f172a;">+20 123 456 7890</a></li>
+            <li><i class="fa-brands fa-whatsapp" style="margin-inline-start:.25rem; color:#25D366"></i> واتساب: <a href="https://wa.me/201234567890" target="_blank" rel="noopener" style="text-decoration:none; color:#0f172a;">راسلنا عبر واتساب</a></li>
+            <li><i class="fa-solid fa-envelope" style="margin-inline-start:.25rem; color:#0f172a"></i> البريد: <a href="mailto:info@example.com" style="text-decoration:none; color:#0f172a;">info@example.com</a></li>
+            <li><i class="fa-solid fa-location-dot" style="margin-inline-start:.25rem; color:#d39a00"></i> العنوان: شارع النموذج، القاهرة، مصر</li>
+            <li><i class="fa-regular fa-clock" style="margin-inline-start:.25rem; color:#0f172a"></i> المواعيد: يومياً 10 صباحاً - 8 مساءً</li>
+          </ul>
+        </section>
+      </div>
+
+
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer" aria-labelledby="footerTitle">
+    <div class="container footer__grid">
+      <section class="footer__col" aria-label="نبذة">
+        <h3 id="footerTitle" class="footer__title">قَرْصَةُ نَحْلَةٍ</h3>
+        <p class="footer__text">متجرُكم الأول للمنتجات الطبيعية من العسل والأعشاب والزيوت، جودةٌ تثق بها.</p>
+      </section>
+
+      <nav class="footer__col" aria-label="روابط سريعة">
+        <h4 class="footer__heading">روابط سريعة</h4>
+        <ul class="footer__links">
+          <li><a href="index.html">الرئيسية</a></li>
+          <li><a href="#featured">جميع المنتجات</a></li>
+          <li><a href="mixes.html">الخلطات</a></li>
+          <li><a href="contact.html" aria-current="page">تواصل معنا</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer__col" aria-label="الفئات">
+        <h4 class="footer__heading">الفئات</h4>
+        <ul class="footer__links">
+          <li><a href="honey.html">العسل</a></li>
+          <li><a href="herbs.html">الأعشاب</a></li>
+          <li><a href="oils.html">الزيوت</a></li>
+        </ul>
+      </nav>
+
+      <section class="footer__col" aria-label="تواصل معنا">
+        <h4 class="footer__heading">تواصل معنا</h4>
+        <ul class="footer__links footer__contact">
+          <li>
+            <a href="tel:+966123456789" aria-label="اتصال هاتفي">
+              <i class="fa-solid fa-phone"></i>
+              <span>+966 12 345 6789</span>
+            </a>
+          </li>
+          <li>
+            <a href="mailto:contact@beesting.sa" aria-label="بريد إلكتروني">
+              <i class="fa-solid fa-at"></i>
+              <span>contact@beesting.sa</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="footer__col" aria-label="تابعنا">
+        <h4 class="footer__heading">تابعنا</h4>
+        <div class="footer__social">
+          <a href="#" aria-label="واتساب"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="#" aria-label="فيسبوك"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#" aria-label="فيسبوك ماسنجر"><i class="fa-brands fa-facebook-messenger"></i></a>
+        </div>
+      </section>
+    </div>
+
+    <hr class="footer__divider" aria-hidden="true">
+    <div class="container footer__bottom">
+      <p class="footer__copy">© 2024 قرصة نحلة جميع الحقوق محفوظة</p>
+      <a href="https://ch-momahmoud.github.io/" class="footer__copy" target="_blank">تصميم ,انشاء  Ch.M.M </a>
+    </div>
+  </footer>
+
+  <script>
+    // تحقق بسيط من الحقول قبل الإرسال (تجريبي)
+    document.addEventListener('DOMContentLoaded', function(){
+      const form = document.getElementById('contactForm');
+      if(!form) return;
+      form.addEventListener('submit', function(e){
+        const name = document.getElementById('name');
+        const message = document.getElementById('message');
+        if(!name.value.trim() || !message.value.trim()){
+          e.preventDefault();
+          alert('يرجى إدخال الاسم والرسالة.');
+        }
+      });
+    });
+  </script>
+  <script src="js/script.js"></script>
+  <script src="js/cart.js"></script>
+</body>
+</html>

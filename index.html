@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>قَرْصَةُ نَحْلَةٍ</title>
+  <meta name="description" content="نقاء الطبيعة في كل قطرة - عسل طبيعي، أعشاب نادرة وزيوت نقية" />
+  <meta name="keywords" content="عسل طبيعي, عسل سدر, عسل موالح, عسل جبلي, عسل بردقوش, منتجات عسل, متجر عسل, عسل خام, عسل النحل, عسل مصري, عسل أصلي, أعشاب طبيعية, زيوت طبيعية, خلطات عسل, أفضل أسعار العسل, شراء عسل أونلاين" />
+  <!-- Open Graph / Facebook -->
+  <meta property="og:locale" content="ar_AR" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="قرصة نحلة | عسل طبيعي أصلي، أعشاب وزيوت" />
+  <meta property="og:description" content="متجر عسل طبيعي أصلي معتمد. عسل سدر جبلي وعسل موالح وبردقوش، أعشاب وزيوت نقية. توصيل سريع وأسعار مميزة." />
+  <meta property="og:image" content="imgs/logo.jpeg" />
+  <meta property="og:image:alt" content="قرصة نحلة - متجر العسل الطبيعي" />
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="قرصة نحلة | عسل طبيعي أصلي، أعشاب وزيوت" />
+  <meta name="twitter:description" content="متجر عسل طبيعي أصلي معتمد. عسل سدر جبلي وعسل موالح وبردقوش، أعشاب وزيوت نقية. توصيل سريع وأسعار مميزة." />
+  <meta name="twitter:image" content="imgs/logo.jpeg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="icon" type="image/x-icon" href="imgs/logo.ico">
+</head>
+<body>
+  <!-- الشريط العلوي -->
+  <header class="topbar">
+    <nav class="container topbar__inner">
+
+
+      <div class="brand nav-left" aria-label="الشعار">
+        <!-- شعار -->
+        <a href="index.html"><img src="imgs/logo.jpeg" alt="" class="brand-logo" viewBox="0 0 64 64" width="44" height="44" aria-hidden="true"></a>
+        <form id="navSearchForm" class="nav-search" action="index.html" role="search">
+          <i class="fa-solid fa-magnifying-glass nav-search__icon" aria-hidden="true"></i>
+          <label for="navSearchInput" class="visually-hidden">بحث</label>
+          <input id="navSearchInput" name="q" class="nav-search__input" type="search" placeholder="ابحث عن منتج..." autocomplete="off" />
+        </form>
+      </div>
+
+      <div class="nav-center">
+        <ul class="breadcrumb">
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="honey.html">العسل</a></li>
+            <li><a href="herbs.html">الأعشاب</a></li>
+            <li><a href="oils.html">الزيوت</a></li>
+            <li><a href="mixes.html">الخلطات</a></li>
+            <li><a href="contact.html">تواصل معنا</a></li>
+          </ul>
+      </div>
+      
+      <div class="nav-right">
+        <button class="menu-toggle" aria-label="فتح القائمة" aria-controls="sideMenu" aria-expanded="false">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <button class="cart" aria-label="سلة المشتريات">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="cart__badge" aria-hidden="true">0</span>
+          </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Off-canvas side menu for small screens -->
+  <aside id="sideMenu" class="side-menu" aria-hidden="true" tabindex="-1">
+    <div class="side-menu__panel" role="dialog" aria-label="القائمة">
+      <div class="side-menu__header">
+        <span class="side-menu__title">القائمة</span>
+        <button class="side-menu__close" aria-label="إغلاق القائمة">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <ul class="side-menu__list">
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="honey.html">العسل</a></li>
+        <li><a href="herbs.html">الأعشاب</a></li>
+        <li><a href="oils.html">الزيوت</a></li>
+        <li><a href="mixes.html">الخلطات</a></li>
+        <li><a href="contact.html">تواصل معنا</a></li>
+      </ul>
+    </div>
+    <div class="side-menu__backdrop" aria-hidden="true"></div>
+  </aside>
+
+  <!-- قسم الـ Hero -->
+  <section class="hero" role="banner" aria-label="نقاء الطبيعة">
+    <div class="hero__bg" aria-hidden="true">
+      <img id="heroImg" src="imgs/bakg-one.jpeg" alt="" loading="eager">
+    </div>
+
+    <div class="container hero__content">
+        <div class="bee reveal" data-animate="pop" data-delay="120">
+            <span class="white">
+                ق<span class="tashkeel">َ</span>ر<span class="tashkeel">ْ</span>ص<span class="tashkeel">َ</span>ة<span class="tashkeel">ُ</span>
+              </span>
+              <span class="gold">
+                ن<span class="tashkee3">َ</span>ح<span class="tashkee3">ْ</span>ل<span class="tashkee3">َ</span>ة<span class="tashkee2">ٍ</span>
+              </span>
+        </div>
+      <h1 class="hero__title reveal" data-animate="fade-up" data-delay="100">نقاء الطبيعة في كل قطرة</h1>
+      <p class="hero__subtitle reveal" data-animate="fade-up" data-delay="250">
+        اكتشفوا مجموعتنا الفاخرة من العسل الطبيعي، الأعشاب النادرة والزيوت النقية.
+      </p>
+      <a href="#all-products" class="btn btn--primary reveal" data-animate="pop" data-delay="450">تسوّق الآن</a>
+    </div>
+
+  </section>
+
+    <!-- Featured Products moved below -->
+
+  <!-- Shop by Category -->
+  <section id="categories" class="categories section-pad" aria-labelledby="catTitle">
+    <div class="container">
+      <h2 id="catTitle" class="section-title reveal" data-animate="fade-up">تسوّق حسب الفئة</h2>
+      <p class="section-subtitle reveal" data-animate="fade-up" data-delay="120">منتجات طبيعية مختارة بعناية من أجل صحتكم</p>
+
+      <div class="category-grid">
+
+        <!-- العسل -->
+        <a class="category-card reveal" data-animate="pop" data-delay="280" href="honey.html" aria-label="العسل">
+          <img src="imgs/honey.jpeg" alt="عسل طبيعي نقي" loading="lazy" />
+          <span class="category-label">العسل</span>
+        </a>
+
+        <!-- الأعشاب -->
+        <a class="category-card reveal" data-animate="pop" data-delay="220" href="herbs.html" aria-label="الأعشاب">
+          <img src="imgs/herbs.jpeg" alt="أعشاب طبيعية متنوعة" loading="lazy" />
+          <span class="category-label">الأعشاب</span>
+        </a>
+        
+        <!-- الزيوت -->
+        <a class="category-card reveal" data-animate="pop" data-delay="160" href="oils.html" aria-label="الزيوت">
+          <img src="imgs/oils.jpeg" alt="زجاجات زيوت طبيعية" loading="lazy" />
+          <span class="category-label">الزيوت</span>
+        </a>
+        
+        <!-- الخلطات -->
+        <a class="category-card reveal" data-animate="pop" data-delay="160" href="mixes.html" aria-label="الخلطات">
+          <img src="imgs/oils.jpeg" alt="زجاجات زيوت طبيعية" loading="lazy" />
+          <span class="category-label">الخلطات</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Featured Products -->
+  <section id="featured" class="products section-pad" aria-labelledby="featTitle">
+    <div class="container">
+      <h2 id="featTitle" class="section-title reveal" data-animate="fade-up">المنتجات المميّزة</h2>
+      <p class="section-subtitle reveal" data-animate="fade-up" data-delay="120">الأكثر طلباً وشهرة بين عملائنا</p>
+      <div id="featuredGrid" class="product-grid"></div>
+    </div>
+  </section>
+
+  <!-- All Products Section (with filters + pagination) -->
+  <section id="all-products" class="section-pad" aria-labelledby="allProductsTitle">
+    <div class="container">
+      <h2 id="allProductsTitle" class="section-title reveal" data-animate="fade-up">جميع المنتجات</h2>
+      <p class="section-subtitle reveal" data-animate="fade-up" data-delay="120">تصفّح مجموعتنا الكاملة من الخيرات الطبيعية</p>
+
+      
+
+      <!-- Mobile filter toggle -->
+      <div class="filter-toggle-row">
+        <button id="filterToggle" class="filter-toggle" type="button" aria-expanded="false" aria-controls="shopSidebar">
+          تصنيف <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <div class="shop-layout">
+        <main class="shop-main">
+          <div id="allGrid" class="product-grid"></div>
+          <div id="allPager" class="pagination"></div>
+        </main>
+        <aside id="shopSidebar" class="shop-sidebar" aria-label="الفلاتر" hidden>
+          <div class="filter-card">
+            <h3 class="filter-title">الفئات</h3>
+            <ul id="catList" class="filter-list"></ul>
+          </div>
+          <div class="filter-card">
+            <h3 class="filter-title">السعر</h3>
+            <div class="price-range">
+              <div class="price-row"><span>من</span><span id="priceMinLabel">0</span> ج.م</div>
+              <input id="priceMin" type="range" min="0" max="500" step="5" value="0">
+              <div class="price-row"><span>إلى</span><span id="priceMaxLabel">500</span> ج.م</div>
+              <input id="priceMax" type="range" min="0" max="500" step="5" value="500">
+              <button id="applyFilters" class="btn btn--add" type="button">تطبيق</button>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer" aria-labelledby="footerTitle">
+    <div class="container footer__grid">
+      <section class="footer__col" aria-label="نبذة">
+        <h3 id="footerTitle" class="footer__title">قَرْصَةُ نَحْلَةٍ</h3>
+        <p class="footer__text">متجرُكم الأول للمنتجات الطبيعية من العسل والأعشاب والزيوت، جودةٌ تثق بها.</p>
+      </section>
+
+      <nav class="footer__col" aria-label="روابط سريعة">
+        <h4 class="footer__heading">روابط سريعة</h4>
+        <ul class="footer__links">
+          <li><a href="#">الرئيسية</a></li>
+          <li><a href="#featured">جميع المنتجات</a></li>
+          <li><a href="mixes.html">الخلطات</a></li>
+          <li><a href="contact.html">تواصل معنا</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer__col" aria-label="الفئات">
+        <h4 class="footer__heading">الفئات</h4>
+        <ul class="footer__links">
+          <li><a href="honey.html">العسل</a></li>
+          <li><a href="herbs.html">الأعشاب</a></li>
+          <li><a href="oils.html">الزيوت</a></li>
+        </ul>
+      </nav>
+
+      <section class="footer__col" aria-label="تواصل معنا">
+        <h4 class="footer__heading">تواصل معنا</h4>
+        <ul class="footer__links footer__contact">
+          <li>
+            <a href="tel:+966123456789" aria-label="اتصال هاتفي">
+              <i class="fa-solid fa-phone"></i>
+              <span>+966 12 345 6789</span>
+            </a>
+          </li>
+          <li>
+            <a href="mailto:contact@beesting.sa" aria-label="بريد إلكتروني">
+              <i class="fa-solid fa-at"></i>
+              <span>contact@beesting.sa</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="footer__col" aria-label="تابعنا">
+        <h4 class="footer__heading">تابعنا</h4>
+        <div class="footer__social">
+          <a href="#" aria-label="واتساب"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="#" aria-label="فيسبوك"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#" aria-label="فيسبوك ماسنجر"><i class="fa-brands fa-facebook-messenger"></i></a>
+        </div>
+      </section>
+    </div>
+
+    <hr class="footer__divider" aria-hidden="true">
+    <div class="container footer__bottom">
+      <p class="footer__copy"> 2024 قرصة نحلة جميع الحقوق محفوظة</p>
+      <a href="https://ch-momahmoud.github.io/" class="footer__copy" target="_blank">تصميم ,انشاء  Ch.M.M </a>
+    </div>
+  </footer>
+
+
+  
+  <script src="js/script.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/home.js"></script>
+  <script src="js/all-products.js"></script>
+</body>
+</html>
