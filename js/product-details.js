@@ -108,21 +108,19 @@
 
   // Build layout
   root.innerHTML = '';
-  const grid = el('div','product-detail__grid');
-
   // Media column (right in RTL)
   const media = el('div','pd-media');
   const main = el('div','pd-main');
   const mainImg = el('img');
+  mainImg.src = (product.images && product.images[0]) || product.thumbnail || 'imgs/honey.jpeg';
+  mainImg.alt = product.title;
   mainImg.loading = 'eager';
   mainImg.decoding = 'async';
   mainImg.fetchPriority = 'high';
-  mainImg.src = (product.images && product.images[0]) || product.thumbnail || 'imgs/honey.jpeg';
-  mainImg.alt = product.title;
   main.appendChild(mainImg);
   media.appendChild(main);
 
-  // Thumbnails
+  // thumbnails
   const thumbs = el('div','pd-thumbs');
   const imgs = (product.images && product.images.length ? product.images : [product.thumbnail || 'imgs/honey.jpeg']);
   imgs.forEach((src, i)=>{
