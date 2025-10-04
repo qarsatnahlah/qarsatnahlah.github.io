@@ -88,6 +88,8 @@
         const a = el('a','product-media');
         a.href = `product.html?id=${encodeURIComponent(p.id)}`; a.setAttribute('aria-label', p.title);
         const img = el('img'); img.src = p.thumbnail || (p.images && p.images[0]) || 'imgs/oils.jpeg'; img.alt = p.title; img.loading='lazy';
+        img.decoding = 'async';
+        img.fetchPriority = 'low';
         a.appendChild(img);
 
         // badges container (stacked)
