@@ -91,7 +91,8 @@
     return;
   }
 
-  const product = (data.products||[]).find(p=> p.id === id);
+  // Match id regardless of type (number vs string)
+  const product = (data.products||[]).find(p=> String(p.id) === String(id));
   if(!product){
     notFound('لم يتم العثور على هذا المنتج.');
     return;
@@ -108,6 +109,8 @@
 
   // Build layout
   root.innerHTML = '';
+  // Container grid for info/media columns (matches CSS .product-detail__grid)
+  const grid = el('div','product-detail__grid');
   // Media column (right in RTL)
   const media = el('div','pd-media');
   const main = el('div','pd-main');
