@@ -239,8 +239,8 @@
     "featuredSortOrder": 3,
     "categorySortOrder": 3,
     "sortOrderAll": 2,
-    "images": ["imgs/herbs/Palm-pollen/Palm-pollen.png"],
-    "thumbnail": "imgs/herbs/Palm-pollen/Palm-pollen.png",
+    "images": ["imgs/herbs/palm-pollen/palm-pollen.png"],
+    "thumbnail": "imgs/herbs/palm-pollen/palm-pollen.png",
     "defaultWeightId": "g-125",
     "weights": [
       { "id": "g-125", "label": "125جرام",  "grams": 125, "price": 440, "compareAtPrice": null, "inStock": true , "default": true},
