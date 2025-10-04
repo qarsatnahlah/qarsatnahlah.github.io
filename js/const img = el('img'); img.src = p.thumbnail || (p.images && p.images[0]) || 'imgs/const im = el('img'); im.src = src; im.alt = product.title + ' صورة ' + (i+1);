@@ -116,6 +116,9 @@
   const mainImg = el('img');
   mainImg.src = (product.images && product.images[0]) || product.thumbnail || 'imgs/honey.jpeg';
   mainImg.alt = product.title;
+  mainImg.loading = 'eager';
+  mainImg.decoding = 'async';
+  mainImg.fetchPriority = 'high';
   main.appendChild(mainImg);
   media.appendChild(main);
 
@@ -124,7 +127,12 @@
   const imgs = (product.images && product.images.length ? product.images : [product.thumbnail || 'imgs/honey.jpeg']);
   imgs.forEach((src, i)=>{
     const b = el('button','pd-thumb');
-    const im = el('img'); im.src = src; im.alt = product.title + ' صورة ' + (i+1);
+    const im = el('img');
+    im.src = src;
+    im.alt = product.title + ' صورة ' + (i+1);
+    im.loading = 'lazy';
+    im.decoding = 'async';
+    im.fetchPriority = 'low';
     if(i===0) b.setAttribute('aria-current','true');
     b.appendChild(im);
     b.addEventListener('click', ()=>{
