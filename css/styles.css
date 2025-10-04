@@ -677,6 +677,20 @@ body{
   .menu-toggle{ display:inline-grid; }
 }
 
+/* Faster animations on phones: reduce reveal/transition durations */
+@media (max-width: 686px){
+  :root{
+    /* shorten global reveal animations */
+    --anim-duration: .6s;
+    /* shorten floating label as well */
+    --label-anim-duration: .4s;
+  }
+  /* key transitions that were long on desktop */
+  .hero__bg img{ transition-duration: .8s; }
+  .product-media img{ transition-duration: .6s; }
+  .category-card img{ transition-duration: .6s; }
+}
+
 /* Tablet/Phablet: 501px–863px -> links drop below, search expands between logo and cart */
 @media (min-width: 686px) and (max-width: 969px){
   /* add space below fixed navbar (two-row header in this range) */
