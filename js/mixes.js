@@ -95,6 +95,8 @@
         img.src = (p.thumbnail || (p.images && p.images[0]) || 'imgs/honey.jpeg');
         img.alt = p.title;
         img.loading = 'lazy';
+        img.decoding = 'async';
+        img.fetchPriority = 'low';
         a.appendChild(img);
 
         (function renderBadges(){
