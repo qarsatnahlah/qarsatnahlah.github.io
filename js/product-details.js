@@ -7,6 +7,19 @@
 
   const el = (tag, cls)=>{ const e = document.createElement(tag); if(cls) e.className = cls; return e; };
   const priceFmt = (value)=> `${value} ج.م`;
+  // Prefer WebP when available; fallback to original on error
+  const toWebp = (src)=>{ try{ return (typeof src==='string' && /\.(jpe?g|png)$/i.test(src)) ? src.replace(/\.(jpe?g|png)$/i, '.webp') : null; }catch{ return null; } };
+  const setPreferWebp = (imgEl, src)=>{
+    try{
+      const w = toWebp(src);
+      if(w){
+        imgEl.src = w;
+        imgEl.onerror = ()=>{ try{ imgEl.onerror = null; imgEl.src = src; }catch{} };
+      }else{
+        imgEl.src = src;
+      }
+    }catch{ imgEl.src = src; }
+  };
   // Format unit from weight object (unit/amount or fallback to grams)
   const formatUnit = (w)=>{
     if(!w || typeof w !== 'object') return '';
@@ -115,7 +128,8 @@
   const media = el('div','pd-media');
   const main = el('div','pd-main');
   const mainImg = el('img');
-  mainImg.src = (product.images && product.images[0]) || product.thumbnail || 'imgs/honey.jpeg';
+  const firstSrc = (product.images && product.images[0]) || product.thumbnail || 'imgs/honey.jpeg';
+  setPreferWebp(mainImg, firstSrc);
   mainImg.alt = product.title;
   mainImg.loading = 'eager';
   mainImg.decoding = 'async';
@@ -129,7 +143,7 @@
   imgs.forEach((src, i)=>{
     const b = el('button','pd-thumb');
     const im = el('img');
-    im.src = src;
+    setPreferWebp(im, src);
     im.alt = product.title + ' صورة ' + (i+1);
     im.loading = 'lazy';
     im.decoding = 'async';
@@ -137,7 +151,7 @@
     if(i===0) b.setAttribute('aria-current','true');
     b.appendChild(im);
     b.addEventListener('click', ()=>{
-      mainImg.src = src;
+      setPreferWebp(mainImg, src);
       thumbs.querySelectorAll('.pd-thumb[aria-current="true"]').forEach(t=> t.removeAttribute('aria-current'));
       b.setAttribute('aria-current','true');
     });
