@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://qarsatnahlah.github.io/sitemap.xml

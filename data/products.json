@@ -1,0 +1,1219 @@
+{
+  "currency": "EGP",
+  "categories": [
+    { "id": "c-honey", "name": "العسل" },
+    { "id": "c-herbs", "name": "الأعشاب" },
+    { "id": "c-oils", "name": "الزيوت" },
+    { "id": "c-mixes", "name": "الخلطات" }
+  ],
+  "products": [
+    {
+      "id": "p-honey-mawleh",
+      "price":270,
+      "title": "عسل الموالح",
+      "description": "عسل طبيعي نقي بطعم متوازن وغني بالفوائد.\nعسل الموالح غني بـ:\n -مضادات اكسدة\n-فايتمن سي \n -مفيد للمناعة والجهاز الهمضي ",
+      "currency": "EGP",
+      "categoryId": "c-honey",
+      "tags": ["عسل", "طبيعي"],
+      "images": ["imgs/honey/mawleh/mawleh.jpg"],
+      "thumbnail": "imgs/honey/mawleh/mawleh.jpg",
+      "status": "active",
+      "stockStatus":"in_stock",
+      "minOrderQty": 1,
+       
+      "featured": false,
+      "featuredSortOrder": 3,
+      "categorySortOrder": 4,
+      "sortOrderAll": 1,
+      "defaultWeightId": "w-1000",
+      "weights": [
+        { "id": "w-1000",  "label": "1 كيلو", "grams": 1000,  "price": 270, "compareAtPrice": null, "inStock": true , "default":true},
+        { "id": "w-500", "label": "½ كيلو", "grams": 500, "price": 145, "compareAtPrice": null,  "inStock": true },
+        { "id": "w-250", "label": "¼ كيلو", "grams": 250, "price": 80,  "compareAtPrice": null, "inStock": true }
+      ]
+    },
+    {
+      "id": "p-honey-sidr",
+      "sku": "SKU-HNY-SIDR-500",
+      "title": "عسل سدر جبلي ملكي",
+      "description": "عسل سدر جبلي فاخر بنكهة قوية ومميزة. \n الأفضل للمناعة والصحة العامة",
+      "price": 800,
+      "currency": "EGP",
+      "categoryId": "c-honey",
+      "tags": ["عسل", "السدر"],
+      "images": ["imgs/honey/seder/seder.jpg"],
+      "thumbnail": "imgs/honey/seder/seder.jpg",
+      "featured": true,
+      "featuredSortOrder": 2,
+      "categorySortOrder": 1,
+      "sortOrderAll": 1,
+      "status": "active",
+      "defaultWeightId": "w-1000",
+      "weights": [
+        { "id": "w-1000", "label": "1 كيلو",  "grams": 1000, "price": 800, "compareAtPrice": null, "inStock": true,"default":true },
+        { "id": "w-500",  "label": "½ كيلو", "grams": 500,  "price": 430, "compareAtPrice": null, "inStock": true },
+        { "id": "w-250",  "label": "¼ كيلو", "grams": 250,  "price": 220, "compareAtPrice": null, "inStock": true }
+      ]
+    },
+    { 
+      "id": "p-honey-shamr",
+      "sku": "SKU-HNY-ACA-500",
+      "title": "عسل الشمر",
+      "description": "- علاج فعّال للقولون والجهاز الهضمي\n- بديل طبيعي لعسل المانوكا\n- مدعوم بأبحاث علمية موثقة",
+      "price": 300,
+      "currency": "EGP",
+      "categoryId": "c-honey",
+      "tags": ["عسل", "أكاسيا"],
+      "images": ["imgs/honey/shamr/shamr.jpg"],
+      "thumbnail": "imgs/honey/shamr/shamr.jpg" ,
+      "bestseller" : true ,
+      "featured": true,
+      "featuredSortOrder": 1,
+      "categorySortOrder": 2,
+      "sortOrderAll": 1,
+      "status": "active",
+      "defaultWeightId": "w-1000",
+      "weights": [
+        { "id": "w-1000", "label": "1 كيلو",  "grams": 1000, "price": 300, "compareAtPrice": null, "inStock": true },
+        { "id": "w-500",  "label": "½ كيلو", "grams": 500,  "price": 160, "compareAtPrice": null, "inStock": true },
+        { "id": "w-250",  "label": "¼ كيلو", "grams": 250,  "price": 90,  "compareAtPrice": null, "inStock": true }
+      ]
+    },
+    { 
+      "id": "p-honey-black-sead",
+      "title": "عسل حبة البركة و اليانسون",
+      "description": "النحلة تتغذى على رحيق زهرتين مختلفتين، مما يمنح العسل قيمة غذائية عالية.\nيُعد من أفضل أنواع العسل لعلاج مشاكل الجهاز التنفسي وتقوية المناعة.",
+      "price": 280,
+      "compareAtPrice": null,
+      "currency": "EGP",
+      "categoryId": "c-honey",
+      "tags": ["عسل", "ربيع"],
+      "images": ["imgs/honey/black-sead/black-sead.jpg"],
+      "thumbnail": "imgs/honey/black-sead/black-sead.jpg",
+      "featured": false,
+      "featuredSortOrder": 3,
+      "categorySortOrder": 4,
+      "status": "active",
+      "defaultWeightId": "w-1000",
+      "weights": [
+        { "id": "w-1000", "label": "1 كيلو",  "grams": 1000, "price": 280, "compareAtPrice": null, "inStock": true , "default": true},
+        { "id": "w-500",  "label": "½ كيلو", "grams": 500,  "price": 150, "compareAtPrice": null, "inStock": true },
+        { "id": "w-250",  "label": "¼ كيلو", "grams": 250,  "price": 90, "compareAtPrice": null, "inStock": true }
+      ]
+    },
+    {
+      "id": "p-honey-barsdagosf",
+      "title": "عسل البردقوش",
+      "description": "- حلاوته معتدلة\n- مفيد للبروستاتا\n- يدعم توازن هرمونات النساء\n- مفيد لصحة الصدر",
+      "price": 300,
+      "status": "active",
+      "categoryId": "c-honey",
+      "stockStatus":"in_stock",
+      "minOrderQty": 1,
+       
+      "featured": false,
+      "featuredSortOrder": 5,
+      "categorySortOrder": 5,
+      "sortOrderAll": 7,
+      "images": ["imgs/honey/bardagosh/bardagosh.jpg"],
+      "thumbnail": "imgs/honey/bardagosh/bardagosh.jpg",
+      "defaultWeightId": "w-1000",
+      "weights": [
+        { "id": "w-1000", "label": "1 كيلو",  "grams": 1000, "price": 300, "compareAtPrice": null, "inStock": true , "default": true},
+        { "id": "w-500",  "label": "½ كيلو", "grams": 500,  "price": 160, "compareAtPrice": null, "inStock": true },
+        { "id": "w-250",  "label": "¼ كيلو", "grams": 250,  "price": 90, "compareAtPrice": null, "inStock": true }
+      ]
+    },
+    {
+      "id": "p-honey-barseam",
+      "title": "عسل البرسيم",
+      "description": "- يعزز المناعة\n- يحسّن التركيز والطاقة\n- يساعد على التئام الجروح والحروق\n- يهدئ الكحة واحتقان الحلق\n- مفيد لتنظيم سكر الدم وتحسين صحة القلب",
+      "price": 300,
+      "status": "active",
+      "categoryId": "c-honey",
+      "stockStatus":"in_stock",
+      "minOrderQty": 1,
+       
+      "featured": false,
+      "featuredSortOrder": 2,
+      "categorySortOrder": 6,
+      "sortOrderAll": 1,
+      "images": ["imgs/honey/barseam/barseam.jpg"],
+      "thumbnail": "imgs/honey/barseam/barseam.jpg",
+      "defaultWeightId": "w-1000",
+      "weights": [
+        { "id": "w-1000", "label": "1 كيلو",  "grams": 1000, "price": 260, "compareAtPrice": null, "inStock": true , "default": true},
+        { "id": "w-500",  "label": "½ كيلو", "grams": 500,  "price": 140, "compareAtPrice": null, "inStock": true },
+        { "id": "w-250",  "label": "¼ كيلو", "grams": 250,  "price": 75, "compareAtPrice": null, "inStock": true }
+      ]
+    },
+    {
+      "id": "p-honey-wild",
+      "sku": "SKU-HNY-WILD-500",
+      "title": "عسل بالمكسرات",
+      "description": "عسل بالمكسرات",
+      "price": 260,
+      "compareAtPrice": null,
+      "currency": "EGP",
+      "categoryId": "c-honey",
+      "tags": ["عسل", "طبيعي"],
+      "images": ["imgs/honey.jpeg"],
+      "thumbnail": "imgs/honey.jpeg",
+      "featured": false,
+      "status": "inactive"
+    },
+    {
+      "id": "p-herbs-royal",
+      "title": "غذاء ملكات",
+      "description": "",
+      "price": 18,
+      "status": "active",
+      "categoryId": "c-herbs",
+      "stockStatus":"in_stock",
+      "minOrderQty": 1,
+       
+      "featured": false,
+      "featuredSortOrder": 3,
+      "categorySortOrder": 1,
+       
+      "images": ["imgs/herbs/royal/royal.jpg"],
+      "thumbnail": "imgs/herbs/royal/royal.jpg",
+      "defaultWeightId": "g-60",
+      "weights": [
+        { "id": "g-60", "label": "60جرام",  "grams": 60, "price": 1080, "compareAtPrice": null, "inStock": true },
+        { "id": "g-40",  "label": "40جرام", "grams": 40,  "price": 720, "compareAtPrice": null, "inStock": true, "default": true },
+        { "id": "g-20",  "label": "20جرام", "grams": 20,  "price": 360, "compareAtPrice": null, "inStock": true }
+      ],
+      "customPricing": {
+        "enabled": true,
+        "unit": "g",
+        "pricePerUnit": 18,
+        "min": 10,
+        "max": 1000,
+        "step": 1,
+        "label": "تحديد الجرامات"
+    }
+    },
+    {
+    "id": "p-herbs-Maca",
+    "title": "جذور الماكا",
+    "description": "",
+    "price": 6,
+    "status": "active",
+    "categoryId": "c-herbs",
+    "stockStatus":"in_stock",
+    "minOrderQty": 1,
+     
+    "featured": false,
+    "featuredSortOrder": 3,
+    "categorySortOrder": 2,
+    "images": ["imgs/herbs/Maca/Maca.jpg"],
+    "thumbnail": "imgs/herbs/Maca/Maca.jpg",
+    "defaultWeightId": "g-125",
+    "weights": [
+      { "id": "g-125", "label": "125جرام",  "grams": 125, "price": 750, "compareAtPrice": null, "inStock": true , "default": true},
+      { "id": "g-70",  "label": "70جرام", "grams": 70,  "price": 420, "compareAtPrice": null, "inStock": true },
+      { "id": "g-30",  "label": "30جرام", "grams": 30,  "price": 180, "compareAtPrice": null, "inStock": true }
+    ],
+    "customPricing": {
+      "enabled": true,
+      "unit": "g",
+      "pricePerUnit": 6,
+      "min": 10,
+      "max": 1000,
+      "step": 1,
+      "label": "تحديد الجرامات"
+  }
+  },
+  {
+    "id": "p-herbs-Palm-pollen",
+    "title": "طلع النخل",
+    "description": "",
+    "price": 3.5,
+    "status": "active",
+    "categoryId": "c-herbs",
+    "stockStatus":"in_stock",
+    "minOrderQty": 1,
+     
+    "featured": false,
+    "featuredSortOrder": 3,
+    "categorySortOrder": 3,
+    "sortOrderAll": 2,
+    "images": ["imgs/herbs/Palm-pollen/Palm-pollen.png"],
+    "thumbnail": "imgs/herbs/Palm-pollen/Palm-pollen.png",
+    "defaultWeightId": "g-125",
+    "weights": [
+      { "id": "g-125", "label": "125جرام",  "grams": 125, "price": 440, "compareAtPrice": null, "inStock": true , "default": true},
+      { "id": "g-70",  "label": "70جرام", "grams": 70,  "price": 245, "compareAtPrice": null, "inStock": true },
+      { "id": "g-30",  "label": "30جرام", "grams": 30,  "price": 105, "compareAtPrice": null, "inStock": true }
+    ],
+    "customPricing": {
+      "enabled": true,
+      "unit": "g",
+      "pricePerUnit": 3.5,
+      "min": 10,
+      "max": 1000,
+      "step": 1,
+      "label": "تحديد الجرامات"
+  }
+  },
+  {
+    "id": "p-herbs-ashwagandha",
+    "title": "أشجواندا",
+    "description": "",
+    "price": 3,
+    "status": "active",
+    "categoryId": "c-herbs",
+    "stockStatus":"in_stock",
+    "minOrderQty": 1,
+     
+    "featured": false,
+    "featuredSortOrder": 3,
+    "categorySortOrder": 4,
+     
+    "images": ["imgs/herbs/ashwagandha/ashwagandha.jpg"],
+    "thumbnail": "imgs/herbs/ashwagandha/ashwagandha.jpg",
+    "defaultWeightId": "g-125",
+    "weights": [
+      { "id": "g-125", "label": "125جرام",  "grams": 125, "price": 375, "compareAtPrice": null, "inStock": true , "default": true},
+      { "id": "g-70",  "label": "70جرام", "grams": 70,  "price": 210, "compareAtPrice": null, "inStock": true },
+      { "id": "g-30",  "label": "30جرام", "grams": 30,  "price": 90, "compareAtPrice": null, "inStock": true }
+    ],
+    "customPricing": {
+      "enabled": true,
+      "unit": "g",
+      "pricePerUnit": 3,
+      "min": 10,
+      "max": 1000,
+      "step": 1,
+      "defaultAmount": 125,
+      "label": "تحديد الجرامات"
+  }
+  },
+  {
+    "id": "p-herbs-pollen",
+    "title": "حبوب اللقاح",
+    "description": "",
+    "price": 2.5,
+    "status": "active",
+    "categoryId": "c-herbs",
+    "stockStatus":"in_stock",
+    "minOrderQty": 1,
+     
+    "featured": false,
+    "featuredSortOrder": 3,
+    "categorySortOrder": 5,
+     
+    "images": ["imgs/herbs/pollen/pollen.jpg"],
+    "thumbnail": "imgs/herbs/pollen/pollen.jpg",
+    "defaultWeightId": "g-125",
+    "weights": [
+      { "id": "g-125", "label": "125جرام",  "grams": 125, "price": 313, "compareAtPrice": null, "inStock": true , "default": true},
+      { "id": "g-70",  "label": "70جرام", "grams": 70,  "price": 175, "compareAtPrice": null, "inStock": true },
+      { "id": "g-30",  "label": "30جرام", "grams": 30,  "price": 75, "compareAtPrice": null, "inStock": true }
+    ],
+    "customPricing": {
+      "enabled": true,
+      "unit": "g",
+      "pricePerUnit": 2.5,
+      "min": 10,
+      "max": 1000,
+      "step": 1,
+      "label": "تحديد الجرامات"
+  }
+  },
+    {
+      "id": "p-herbs-Frankincense",
+      "title": "لبان دكر",
+      "description": "",
+      "price": 2,
+      "status": "active",
+      "categoryId": "c-herbs",
+      "stockStatus":"in_stock",
+      "minOrderQty": 1,
+       
+      "featured": false,
+      "featuredSortOrder": 3,
+      "categorySortOrder": 6,
+       
+      "images": ["imgs/herbs/Frankincense/Frankincense.jpg"],
+      "thumbnail": "imgs/herbs/Frankincense/Frankincense.jpg",
+      "defaultWeightId": "g-125",
+      "weights": [
+        { "id": "g-125", "label": "125جرام",  "grams": 125, "price": 250, "compareAtPrice": null, "inStock": true , "default": true},
+        { "id": "g-70",  "label": "70جرام", "grams": 70,  "price": 170, "compareAtPrice": null, "inStock": true },
+        { "id": "g-30",  "label": "30جرام", "grams": 30,  "price": 90, "compareAtPrice": null, "inStock": true }
+      ],
+      "customPricing": {
+        "enabled": true,
+        "unit": "g",
+        "pricePerUnit": 2,
+        "min": 10,
+        "max": 1000,
+        "step": 1,
+        "defaultAmount": 120,
+        "label": "تحديد الجرامات"
+    }
+    },
+    {
+      "id": "p-herbs-black-sead",
+      "title": "حبة البركة",
+      "description": "",
+      "price": 0.75,
+      "status": "active",
+      "categoryId": "c-herbs",
+      "stockStatus":"in_stock",
+      "minOrderQty": 1,
+       
+      "featured": false,
+      "featuredSortOrder": 3,
+      "categorySortOrder": 7,
+       
+      "images": ["imgs/herbs/black-sead/black-sead.jpg"],
+      "thumbnail": "imgs/herbs/black-sead/black-sead.jpg",
+      "defaultWeightId": "g-125",
+      "weights": [
+        { "id": "g-125", "label": "1 كيلو",  "grams": 1000, "price": 550, "compareAtPrice": null, "inStock": true , "default": true},
+        { "id": "g-70",  "label": "70جرام", "grams": 250,  "price": 187, "compareAtPrice": null, "inStock": true },
+        { "id": "g-30",  "label": "30جرام", "grams": 30,  "price": 22, "compareAtPrice": null, "inStock": true }
+      ],
+      "customPricing": {
+        "enabled": true,
+        "unit": "g",
+        "pricePerUnit":0.75,
+        "min": 10,
+        "max": 1000,
+        "step": 1,
+        "label": "تحديد الجرامات"
+    }
+    },
+    {
+      "id": "p-herbs-Hask",
+      "title": "حسك",
+      "description": "",
+      "price": 2,
+      "status": "active",
+      "categoryId": "c-herbs",
+      "stockStatus":"in_stock",
+      "minOrderQty": 1,
+       
+      "featured": false,
+      "featuredSortOrder": 3,
+      "categorySortOrder": 8,
+       
+      "images": ["imgs/herbs/Hask/Hask.jpeg"],
+      "thumbnail": "imgs/herbs/Hask/Hask.jpeg",
+      "defaultWeightId": "g-1000",
+      "weights": [
+        { "id": "g-1000", "label": "125جرام",  "grams": 125, "price": 250, "compareAtPrice": null, "inStock": true , "default": true},
+        { "id": "g-70",  "label": "70جرام", "grams": 70,  "price": 175, "compareAtPrice": null, "inStock": true },
+        { "id": "g-30",  "label": "30جرام", "grams": 30,  "price": 75, "compareAtPrice": null, "inStock": true }
+      ],
+      "customPricing": {
+        "enabled": true,
+        "unit": "g",
+        "pricePerUnit": 2,
+        "min": 10,
+        "max": 1000,
+        "step": 1,
+        "label": "تحديد الجرامات"
+    }
+    },
+    {
+      "id": "p-herbs-Antimony",
+      "title": "كحل الإثمد",
+      "description": "",
+      "price": 3,
+      "status": "active",
+      "categoryId": "c-herbs",
+      "stockStatus":"in_stock",
+      "minOrderQty": 1,
+       
+      "featured": false,
+      "featuredSortOrder": 3,
+      "categorySortOrder": 9,
+       
+      "images": ["imgs/herbs/Antimony/Antimony.jpg"],
+      "thumbnail": "imgs/herbs/Antimony/Antimony.jpg",
+      "defaultWeightId": "g-125",
+      "weights": [
+        { "id": "g-125", "label": "125جرام",  "grams": 125, "price": 375, "compareAtPrice": null, "inStock": true , "default": true},
+        { "id": "g-70",  "label": "70جرام", "grams": 70,  "price": 210, "compareAtPrice": null, "inStock": true },
+        { "id": "g-30",  "label": "30جرام", "grams": 30,  "price": 90, "compareAtPrice": null, "inStock": true }
+      ],
+      "customPricing": {
+        "enabled": true,
+        "unit": "g",
+        "pricePerUnit": 3,
+        "min": 10,
+        "max": 1000,
+        "step": 1,
+        "label": "تحديد الجرامات"
+    }
+    },
+    {
+      "id": "p-herbs-red-ginseng",
+      "title": "جنسنج أحمر",
+      "description": "",
+      "price": 10,
+      "status": "active",
+      "categoryId": "c-herbs",
+      "stockStatus":"in_stock",
+      "minOrderQty": 1,
+       
+      "featured": false,
+      "featuredSortOrder": 3,
+      "categorySortOrder": 10,
+       
+      "images": ["imgs/herbs/red-ginseng/red-ginseng.jpg"],
+      "thumbnail": "imgs/herbs/red-ginseng/red-ginseng.jpg",
+      "defaultWeightId": "g-125",
+      "weights": [
+        { "id": "g-125", "label": "125جرام",  "grams": 125, "price": 1250, "compareAtPrice": null, "inStock": true , "default": true},
+        { "id": "g-70",  "label": "70جرام", "grams": 70,  "price": 700, "compareAtPrice": null, "inStock": true },
+        { "id": "g-30",  "label": "30جرام", "grams": 30,  "price": 300, "compareAtPrice": null, "inStock": true }
+      ],
+      "customPricing": {
+        "enabled": true,
+        "unit": "g",
+        "pricePerUnit": 10,
+        "min": 10,
+        "max": 1000,
+        "step": 1,
+        "label": "تحديد الجرامات"
+    }
+    },
+    {
+      "id": "p-herbs-Indian",
+      "title": "قسط هندي",
+      "description": "",
+      "price": 2.5,
+      "status": "active",
+      "categoryId": "c-herbs",
+      "stockStatus":"in_stock",
+      "minOrderQty": 1,
+       
+      "featured": false,
+      "featuredSortOrder": 3,
+      "categorySortOrder": 10,
+       
+      "images": ["imgs/herbs/Indian/Indian.jpg"],
+      "thumbnail": "imgs/herbs/Indian/Indian.jpg",
+      "defaultWeightId": "g-125",
+      "weights": [
+        { "id": "g-125", "label": "125جرام",  "grams": 125, "price": 313, "compareAtPrice": null, "inStock": true , "default": true},
+        { "id": "g-70",  "label": "70جرام", "grams": 70,  "price": 175, "compareAtPrice": null, "inStock": true },
+        { "id": "g-30",  "label": "30جرام", "grams": 30,  "price": 75, "compareAtPrice": null, "inStock": true }
+      ],
+      "customPricing": {
+        "enabled": true,
+        "unit": "g",
+        "pricePerUnit": 2.5,
+        "min": 10,
+        "max": 1000,
+        "step": 1,
+        "label": "تحديد الجرامات"
+    }
+    },
+    {
+      "id": "p-herbs-prop",
+      "title": "بروبليس",
+      "description": "",
+      "price": 10,
+      "status": "active",
+      "categoryId": "c-herbs",
+      "stockStatus":"in_stock",
+      "minOrderQty": 1,
+       
+      "featured":false,
+      "featuredSortOrder": 5,
+      "categorySortOrder": 10,
+       
+      "images": ["imgs/herbs/prop/prop.jpg"],
+      "thumbnail": "imgs/herbs/prop/prop.jpg",
+      "defaultWeightId": "g-125",
+      "weights": [
+        { "id": "g-125", "label": "125جرام",  "grams": 125, "price": 1250, "compareAtPrice": null, "inStock": true},
+        { "id": "g-70",  "label": "70جرام", "grams": 70,  "price":700, "compareAtPrice": null, "inStock": true , "default": true },
+        { "id": "g-30",  "label": "30جرام", "grams": 30,  "price": 300, "compareAtPrice": null, "inStock": true }
+      ],
+      "customPricing": {
+        "enabled": true,
+        "unit": "g",
+        "pricePerUnit": 10,
+        "min": 10,
+        "max": 1000,
+        "step": 1,
+        "label": "تحديد الجرامات"
+    }
+    },
+    {
+      "id": "p-oil-olive",
+      "title": "زيت الزيتون",
+      "description": "- يحافظ على صحة القلب\n- يخفض الكوليسترول الضار\n- يرطب البشرة ويحارب التجاعيد\n- يقوّي الشعر ويقلل تساقطه\n- يخفف التهابات المفاصل \n -زيت خام معصور علي البارد ",
+      "price": 1.7,
+      "compareAtPrice": null,
+      "currency": "EGP",
+      "categoryId": "c-oils",
+      "tags": ["زيوت", "زيتون", "الزيتون"],
+      "images": ["imgs/oils/olive-oil/olive-oil.jpg"],
+      "thumbnail": "imgs/oils/olive-oil/olive-oil.jpg",
+      "status": "active",
+      "stockStatus":"in_stock",
+      "minOrderQty": 1,
+       
+      "featured":false,
+      "featuredSortOrder": 0,
+      "categorySortOrder": 1,
+      "sortOrderAll": 5,
+      "defaultWeightId": "g-125",
+      "weights": [
+        { "id": "g-125", "label": "1 لتر", "unit":"l", "amount": 1, "price": 600, "compareAtPrice": null, "inStock": true , "default": true},
+        { "id": "g-70",  "label": "500 ملي", "unit":"ml", "amount": 500, "price": 300,"compareAtPrice": null, "inStock": true },
+        { "id": "g-30",  "label": "250 ملي", "unit":"ml", "amount": 250, "price": 150,"compareAtPrice": null, "inStock": true }
+      ],
+      "customPricing": {
+          "enabled": true,
+          "unit": "l",
+          "pricePerUnit": 1.7,
+          "min": 10,
+          "max": 1000,
+          "step": 1,
+          "defaultAmount": 100,
+          "label": "تحديد اللتر/الملي"
+      }
+    },
+    {
+      "id": "p-oil-almondse",
+      "title": "زيت اللوز الحلو",
+      "description": "- مرطب ممتاز للبشرة\n- منعم للشعر \n زيت خام معصور علي البارد .",
+      "price": 2.75,
+      "compareAtPrice": null,
+      "currency": "EGP",
+      "categoryId": "c-oils",
+      "tags": ["زيوت", "لوز","الحلو"],
+      "images": ["imgs/oils/almondse-oil/almondse-oil.jpg"],
+      "thumbnail": "imgs/oils/almondse-oil/almondse-oil.jpg",
+      "status": "active",
+      "stockStatus":"in_stock",
+      "minOrderQty": 1,
+       
+      "featured":false,
+      "categorySortOrder": 2,
+       
+      "defaultWeightId": "g-125",
+      "weights": [
+        { "id": "g-125", "label": "125جرام",  "grams": 125, "price": 344, "compareAtPrice": null, "inStock": true , "default": true},
+        { "id": "g-70",  "label": "70جرام", "grams": 70,  "price": 192, "compareAtPrice": null, "inStock": true },
+        { "id": "g-30",  "label": "30جرام", "grams": 30,  "price": 82, "compareAtPrice": null, "inStock": true }
+      ],
+      "customPricing": {
+          "enabled": true,
+          "unit": "g",
+          "pricePerUnit": 2.75,
+          "min": 10,
+          "max": 1000,
+          "step": 1,
+          "defaultAmount": 100,
+          "label": "تحديد الجرامات"
+      }
+    },
+    { 
+      "id": "p-oil-sesame",
+      "sku": "SKU-OIL-SSM-250",
+      "title": "زيت السمسم",
+      "description": "- غني بالكالسيوم\n- ممتاز للشعر\n- ممتاز للبشرة \n زيت خام معصور علي البارد .",
+      "price": 1,
+      "compareAtPrice": null,
+      "currency": "EGP",
+      "categoryId": "c-oils",
+      "tags": ["زيوت", "سمسم"],
+      "images": ["imgs/oils/sesame-oil/sesame-oil.jpg"],
+      "thumbnail": "imgs/oils/sesame-oil/sesame-oil.jpg",
+      "status": "active",
+      "stockStatus":"in_stock",
+      "minOrderQty": 1,
+       
+      "featured":false,
+      "categorySortOrder": 3,
+       
+      "defaultWeightId": "g-125",
+      "weights": [
+        { "id": "g-125", "label": "125جرام",  "grams": 125, "price": 125, "compareAtPrice": null, "inStock": true , "default": true},
+        { "id": "g-70",  "label": "70جرام", "grams": 70,  "price": 70, "compareAtPrice": null, "inStock": true },
+        { "id": "g-30",  "label": "30جرام", "grams": 30,  "price": 30, "compareAtPrice": null, "inStock": true }
+      ],
+      "customPricing": {
+          "enabled": true,
+          "unit": "g",
+          "pricePerUnit": 1,
+          "min": 10,
+          "max": 1000,
+          "step": 1,
+          "defaultAmount": 100,
+          "label": "تحديد الجرامات"
+      }
+    },
+    { 
+      "id": "p-oil-coconut",
+      "title": "زيت جوز الهند",
+      "description": "زيت جوز هند نقي يستخدم للطهي والعناية.\nمميزاته:\n- مغذي للمخ\n- مطهر معوي\n- فعال ضد الحلزوني \n زيت خام معصور علي البارد .",
+      "price": 1,
+      "compareAtPrice": 125,
+      "currency": "EGP",
+      "categoryId": "c-oils",
+      "tags": ["زيوت", "جوز الهند"],
+      "images": ["imgs/oils/coconut-oil/coconut-oil.jpg"],
+      "thumbnail": "imgs/oils/coconut-oil/coconut-oil.jpg",
+      "status": "active",
+      "stockStatus":"in_stock",
+      "minOrderQty": 1,
+       
+      "featured":false,
+      "categorySortOrder": 4,
+       
+      "defaultWeightId": "g-125",
+      "weights": [
+        { "id": "g-125", "label": "125جرام",  "grams": 125, "price": 125, "compareAtPrice": null, "inStock": true , "default": true},
+        { "id": "g-70",  "label": "70جرام", "grams": 70,  "price": 70, "compareAtPrice": null, "inStock": true },
+        { "id": "g-30",  "label": "30جرام", "grams": 30,  "price": 30, "compareAtPrice": null, "inStock": true }
+      ],
+      "customPricing": {
+          "enabled": true,
+          "unit": "g",
+          "pricePerUnit": 1,
+          "min": 10,
+          "max": 1000,
+          "step": 1,
+          "defaultAmount": 100,
+          "label": "تحديد الجرامات"
+      }
+    },
+    {
+      "id": "p-oil-blackseed",
+      "title": "زيت حبّة البركة",
+      "description": "زيت حبّة البركة نقي وطبيعي. \n رائع لزيادة المناعة والجهاز التنفسي والخصوبة.  \n زيت خام معصور علي البارد .",
+      "price": 1.5,
+      "compareAtPrice": null,
+      "currency": "EGP",
+      "categoryId": "c-oils",
+      "tags": ["زيوت", "حبة البركة"],
+      "images": ["imgs/oils/blacksead-oil/blacksead-oil.jpg"],
+      "thumbnail": "imgs/oils/blacksead-oil/blacksead-oil.jpg",
+      "status": "active",
+      "stockStatus":"in_stock",
+      "minOrderQty": 1,
+       
+      "featured":false,
+      "categorySortOrder": 5,
+       
+      "defaultWeightId": "g-125",
+      "weights": [
+        { "id": "g-125", "label": "125جرام",  "grams": 125, "price": 187, "compareAtPrice": null, "inStock": true , "default": true},
+        { "id": "g-70",  "label": "70جرام", "grams": 70,  "price": 105, "compareAtPrice": null, "inStock": true },
+        { "id": "g-30",  "label": "30جرام", "grams": 30,  "price": 45, "compareAtPrice": null, "inStock": true }
+      ],
+      "customPricing": {
+          "enabled": true,
+          "unit": "g",
+          "pricePerUnit": 1.5,
+          "min": 10,
+          "max": 1000,
+          "step": 1,
+          "defaultAmount": 100,
+          "label": "تحديد الجرامات"
+      }
+    },
+    {
+      "id": "p-oil-thyme",
+      "title": "زيت الزعتر معصور بالحمل",
+      "description": "- تركيز عالي كأنه مقطر\n- مضاد حيوي\n- حل لمشاكل كثيرة في الجهاز الهضمي\n- مطهر للجهاز الهضمي \n زيت خام معصور علي البارد",
+      "price": 4,
+      "compareAtPrice": null,
+      "currency": "EGP",
+      "categoryId": "c-oils",
+      "tags": ["زيوت", "زعتر"],
+      "images": ["imgs/oils/thyme-oil/thyme-oil.jpg"],
+      "thumbnail": "imgs/oils/thyme-oil/thyme-oil.jpg",
+      "status": "active",
+      "stockStatus":"in_stock",
+      "minOrderQty": 1,
+       
+      "featured":false,
+      "categorySortOrder": 6,
+       
+      "defaultWeightId": "g-125",
+      "weights": [
+        { "id": "g-125", "label": "125جرام",  "grams": 125, "price": 500, "compareAtPrice": null, "inStock": true , "default": true},
+        { "id": "g-70",  "label": "70جرام", "grams": 70,  "price": 280, "compareAtPrice": null, "inStock": true },
+        { "id": "g-30",  "label": "30جرام", "grams": 30,  "price": 120, "compareAtPrice": null, "inStock": true }
+      ],
+      "customPricing": {
+          "enabled": true,
+          "unit": "g",
+          "pricePerUnit": 4,
+          "min": 10,
+          "max": 1000,
+          "step": 1,
+          "defaultAmount": 100,
+          "label": "تحديد الجرامات"
+      }
+    },
+    {
+      "id": "p-oil-castor",
+      "title": "زيت الخروع",
+      "description": "- يعزز نمو الشعر ويزيد كثافته\n- يرطب البشرة ويحميها من الجفاف\n- يساعد على تقوية الرموش والحواجب\n- يخفف التهابات فروة الرأس\n- يحسّن حركة الأمعاء ويعمل كملين طبيعي \n زيت خام معصور علي البارد",
+      "price": 1,
+      "compareAtPrice": null,
+      "currency": "EGP",
+      "categoryId": "c-oils",
+      "tags": ["زيوت", "الخروع"],
+      "images": ["imgs/oils/castor-oil/castor-oil.jpg"],
+      "thumbnail": "imgs/oils/castor-oil/castor-oil.jpg",
+      "status": "active",
+      "stockStatus":"in_stock",
+      "minOrderQty": 1,
+       
+      "featured":false,
+      "categorySortOrder": 7,
+       
+      "defaultWeightId": "g-125",
+      "weights": [
+        { "id": "g-125", "label": "125جرام",  "grams": 125, "price": 125, "compareAtPrice": null, "inStock": true , "default": true},
+        { "id": "g-70",  "label": "70جرام", "grams": 70,  "price": 70, "compareAtPrice": null, "inStock": true },
+        { "id": "g-30",  "label": "30جرام", "grams": 30,  "price": 30, "compareAtPrice": null, "inStock": true }
+      ],
+      "customPricing": {
+          "enabled": true,
+          "unit": "g",
+          "pricePerUnit": 1,
+          "min": 10,
+          "max": 1000,
+          "step": 1,
+          "defaultAmount": 100,
+          "label": "تحديد الجرامات"
+      }
+    },
+    {
+      "id": "p-oil-arugula",
+      "title": "زيت الجرجير",
+      "description": "يصلح للأكل\nخافض للضغط\nممتاز للشعر\nمنشط رائع \n زيت خام معصور علي البارد .",
+      "price": 1.5,
+      "compareAtPrice": null,
+      "currency": "EGP",
+      "categoryId": "c-oils",
+      "tags": ["زيوت", "الجرجير"],
+      "images": ["imgs/oils/arugula-oil/arugula-oil.png"],
+      "thumbnail": "imgs/oils/arugula-oil/arugula-oil.png",
+      "status": "active",
+      "stockStatus":"in_stock",
+      "minOrderQty": 1,
+       
+      "featured":false,
+      "categorySortOrder":8,
+       
+      "defaultWeightId": "g-125",
+      "weights": [
+        { "id": "g-125", "label": "125جرام",  "grams": 125, "price": 187, "compareAtPrice": null, "inStock": true , "default": true},
+        { "id": "g-70",  "label": "70جرام", "grams": 70,  "price": 105, "compareAtPrice": null, "inStock": true },
+        { "id": "g-30",  "label": "30جرام", "grams": 30,  "price": 45, "compareAtPrice": null, "inStock": true }
+      ],
+      "customPricing": {
+          "enabled": true,
+          "unit": "g",
+          "pricePerUnit": 1.5,
+          "min": 10,
+          "max": 1000,
+          "step": 1,
+          "defaultAmount": 100,
+          "label": "تحديد الجرامات"
+      }
+    },
+    {
+      "id": "p-oil-flaxseed",
+      "title": "زيت الكتان (الزيت الحار)",
+      "description": "- الزيت الحار\n-  غني بأوميجا 3 \n زيت خام معصور علي البارد .",
+      "price": 0.75,
+      "compareAtPrice": null,
+      "currency": "EGP",
+      "categoryId": "c-oils",
+      "tags": ["زيوت", "الكتان","الحار"],
+      "images": ["imgs/oils/flaxseed-oil/flaxseed-oil.jpg"],
+      "thumbnail": "imgs/oils/flaxseed-oil/flaxseed-oil.jpg",
+      "status": "active",
+      "stockStatus":"in_stock",
+      "minOrderQty": 1,
+       
+      "featured":false,
+      "categorySortOrder": 9,
+       
+      "defaultWeightId": "g-125",
+      "weights": [
+        { "id": "g-125", "label": "125جرام",  "grams": 125, "price": 94, "compareAtPrice": null, "inStock": true , "default": true},
+        { "id": "g-70",  "label": "70جرام", "grams": 70,  "price": 52, "compareAtPrice": null, "inStock": true },
+        { "id": "g-30",  "label": "30جرام", "grams": 30,  "price":22 , "compareAtPrice": null, "inStock": true }
+      ],
+      "customPricing": {
+          "enabled": true,
+          "unit": "g",
+          "pricePerUnit": 0.75,
+          "min": 10,
+          "max": 1000,
+          "step": 1,
+          "defaultAmount": 100,
+          "label": "تحديد الجرامات"
+      }
+    },
+    {
+      "id": "p-oil-jojoba",
+      "title": "زيت  زيت الچوچوبا",
+      "description": "- يزيد نمو الشعر\n- يحارب تساقطه\n- مرطب للبشرة  \n زيت خام معصور علي البارد .",
+      "price": 1.5,
+      "compareAtPrice": null,
+      "currency": "EGP",
+      "categoryId": "c-oils",
+      "tags": ["زيوت", "الچوچوبا","الجوجوبا"],
+      "images": ["imgs/oils/jojoba-oil/jojoba-oil.jpg"],
+      "thumbnail": "imgs/oils/jojoba-oil/jojoba-oil.jpg",
+      "status": "active",
+      "stockStatus":"in_stock",
+      "minOrderQty": 1,
+       
+      "featured":false,
+      "categorySortOrder": 10,
+       
+      "defaultWeightId": "g-125",
+      "weights": [
+        { "id": "g-125", "label": "125جرام",  "grams": 125, "price": 187, "compareAtPrice": null, "inStock": true , "default": true},
+        { "id": "g-70",  "label": "70جرام", "grams": 70,  "price": 105, "compareAtPrice": null, "inStock": true },
+        { "id": "g-30",  "label": "30جرام", "grams": 30,  "price": 45, "compareAtPrice": null, "inStock": true }
+      ],
+      "customPricing": {
+          "enabled": true,
+          "unit": "g",
+          "pricePerUnit": 1.5,
+          "min": 10,
+          "max": 1000,
+          "step": 1,
+          "defaultAmount": 100,
+          "label": "تحديد الجرامات"
+      }
+    },
+    {
+      "id": "p-oil-peppermint",
+      "title": "زيت النعناع خام مقطر ",
+      "description": "- ينشّط الدورة الدموية\n- يخفف الصداع والتوتر\n- ينعش التنفس ويحسّن رائحة الفم\n- يطهر الجهاز الهضمي ويقلل الغازات\n- يهدئ الحكة ولدغ الحشرات",
+      "price": 4,
+      "compareAtPrice": null,
+      "currency": "EGP",
+      "categoryId": "c-oils",
+      "tags": ["زيوت", "النعناع"],
+      "images": ["imgs/oils/peppermint-oil/peppermint-oil.jpg"],
+      "thumbnail": "imgs/oils/peppermint-oil/peppermint-oil.jpg",
+      "status": "active",
+      "stockStatus":"in_stock",
+      "minOrderQty": 1,
+       
+      "featured":false,
+      "categorySortOrder":11,
+       
+      "defaultWeightId": "g-125",
+      "weights": [
+        { "id": "g-125", "label": "125جرام",  "grams": 125, "price": 500, "compareAtPrice": null, "inStock": true , "default": true},
+        { "id": "g-70",  "label": "70جرام", "grams": 70,  "price": 280, "compareAtPrice": null, "inStock": true },
+        { "id": "g-30",  "label": "30جرام", "grams": 30,  "price": 120, "compareAtPrice": null, "inStock": true }
+      ],
+      "customPricing": {
+          "enabled": true,
+          "unit": "g",
+          "pricePerUnit": 4,
+          "min": 10,
+          "max": 1000,
+          "step": 1,
+          "defaultAmount": 100,
+          "label": "تحديد الجرامات"
+      }
+    },
+    {
+      "id": "p-oil-rosemary",
+      "title": "زيت روز ماري معصور بالحمل",
+      "description": "- منبت للشعر\n- يحارب تساقطه\n- دهان للمفاصل\n- يحارب الزهايمر\n زيت خام معصور علي البارد",
+      "price": 2.5,
+      "compareAtPrice": null,
+      "currency": "EGP",
+      "categoryId": "c-oils",
+      "tags": ["زيوت", "روز ماري","روز","ماري","معصور بالحمل"],
+      "images": ["imgs/oils/rosemary-oil/rosemary-oil.jpg"],
+      "thumbnail": "imgs/oils/rosemary-oil/rosemary-oil.jpg",
+      "status": "active",
+      "stockStatus":"in_stock",
+      "minOrderQty": 1,
+       
+      "featured":false,
+      "categorySortOrder": 12,
+       
+      "defaultWeightId": "g-125",
+      "weights": [
+        { "id": "g-125", "label": "125جرام",  "grams": 125, "price": 312, "compareAtPrice": null, "inStock": true , "default": true},
+        { "id": "g-70",  "label": "70جرام", "grams": 70,  "price": 175, "compareAtPrice": null, "inStock": true },
+        { "id": "g-30",  "label": "30جرام", "grams": 30,  "price": 75, "compareAtPrice": null, "inStock": true }
+      ],
+      "customPricing": {
+          "enabled": true,
+          "unit": "g",
+          "pricePerUnit": 2.5,
+          "min": 10,
+          "max": 1000,
+          "step": 1,
+          "defaultAmount": 100,
+          "label": "تحديد الجرامات"
+      }
+    },
+    {
+      "id": "p-oil-sider",
+      "title": "زيت ورق السدر",
+      "description": "- لإنبات الشعر\n- لتكثيف الشعر\n زيت خام معصور علي البارد",
+      "price": 3,
+      "compareAtPrice": null,
+      "currency": "EGP",
+      "categoryId": "c-oils",
+      "tags": ["زيوت", "ورق السدر","السدر","ورق"],
+      "images": ["imgs/oils/sider-oli/sider-oil.jpg"],
+      "thumbnail": "imgs/oils/sider-oli/sider-oil.jpg",
+      "status": "active",
+      "stockStatus":"in_stock",
+      "minOrderQty": 1,
+       
+      "featured":false,
+      "categorySortOrder":13,
+       
+      "defaultWeightId": "g-125",
+      "weights": [
+        { "id": "g-125", "label": "125جرام",  "grams": 125, "price": 375, "compareAtPrice": null, "inStock": true , "default": true},
+        { "id": "g-70",  "label": "70جرام", "grams": 70,  "price": 210, "compareAtPrice": null, "inStock": true },
+        { "id": "g-30",  "label": "30جرام", "grams": 30,  "price": 90, "compareAtPrice": null, "inStock": true }
+      ],
+      "customPricing": {
+          "enabled": true,
+          "unit": "g",
+          "pricePerUnit": 3,
+          "min": 10,
+          "max": 1000,
+          "step": 1,
+          "defaultAmount": 100,
+          "label": "تحديد الجرامات"
+      }
+    },
+    {
+      "id": "p-oil-saad",
+      "title": "زيت السُعد",
+      "description": "لمخصص لتقليل نمو الشعر \n زيت خام معصور علي البارد",
+      "price": 4,
+      "compareAtPrice": null,
+      "currency": "EGP",
+      "categoryId": "c-oils",
+      "tags": ["زيوت", "السُعد","السعد"],
+      "images": ["imgs/oils/saad-oil/saad-oil.jpg"],
+      "thumbnail": "imgs/oils/saad-oil/saad-oil.jpg",
+      "status": "active",
+      "stockStatus":"in_stock",
+      "minOrderQty": 1,
+       
+      "featured":false,
+      "categorySortOrder": 14,
+       
+      "defaultWeightId": "g-125",
+      "weights": [
+        { "id": "g-125", "label": "125جرام",  "grams": 125, "price": 500, "compareAtPrice": null, "inStock": true , "default": true},
+        { "id": "g-70",  "label": "70جرام", "grams": 70,  "price": 280, "compareAtPrice": null, "inStock": true },
+        { "id": "g-30",  "label": "30جرام", "grams": 30,  "price": 90, "compareAtPrice": null, "inStock": true }
+      ],
+      "customPricing": {
+          "enabled": true,
+          "unit": "g",
+          "pricePerUnit": 4,
+          "min": 10,
+          "max": 1000,
+          "step": 1,
+          "defaultAmount": 100,
+          "label": "تحديد الجرامات"
+      }
+    },
+    {
+      "id": "p-oil-pumpkin",
+      "title": "زيت لب خشب اليقطين",
+      "description": "علاج فعال للبروستاتا عن تجربة الكثيرين \n زيت خام معصور علي البارد .",
+      "price": 5,
+      "compareAtPrice": null,
+      "currency": "EGP",
+      "categoryId": "c-oils",
+      "tags": ["زيوت", "لب خشب اليقطين","لب","خشب","اليقطين"],
+      "images": ["imgs/oils/pumpkin-oli/pumpkin-oli.jpg"],
+      "thumbnail": "imgs/oils/pumpkin-oli/pumpkin-oli.jpg",
+      "status": "active",
+      "stockStatus":"in_stock",
+      "minOrderQty": 1,
+       
+      "featured":false,
+      "categorySortOrder": 15,
+      "sortOrderAll": 14,
+      "defaultWeightId": "g-125",
+      "weights": [
+        { "id": "g-125", "label": "125جرام",  "grams": 125, "price": 625, "compareAtPrice": null, "inStock": true , "default": true},
+        { "id": "g-70",  "label": "70جرام", "grams": 70,  "price": 350, "compareAtPrice": null, "inStock": true },
+        { "id": "g-30",  "label": "30جرام", "grams": 30,  "price": 150, "compareAtPrice": null, "inStock": true }
+      ],
+      "customPricing": {
+          "enabled": true,
+          "unit": "g",
+          "pricePerUnit": 5,
+          "min": 10,
+          "max": 1000,
+          "step": 1,
+          "defaultAmount": 100,
+          "label": "تحديد الجرامات"
+      }
+    },
+    {
+      "id": "p-mix-immunity",
+      "title": "خلطة للمناعة",
+      "description": "المكونات:\n1- عسل سدر جبلي ملكي\n2- غذاء ملكات\n3- حبوب اللقاح\n4- قسط هندي\n5- زيت جوز الهند\n6- زيت حبة البركة\n7- بروبليس",
+      "price": 700,
+      "compareAtPrice": null,
+      "currency": "EGP",
+      "categoryId": "c-mixes",
+      "tags": ["خلطات","خلطة","المناعة","للمناعة"],
+      "images": ["imgs/mix/immunity/immunity.jpg"],
+      "thumbnail": "imgs/mix/immunity/immunity.jpg",
+      "status": "active",
+      "stockStatus":"in_stock",
+      "minOrderQty": 1,
+       
+      "featured":false,
+      "categorySortOrder": 4,
+      "sortOrderAll": 14,
+      "defaultWeightId": "w-1000",
+      "weights": [
+        { "id": "w-1000", "label": "1 كيلو",  "grams": 1000, "price": 700, "compareAtPrice": null, "inStock": true , "default": true},
+        { "id": "w-500", "label": "½ كيلو", "grams": 500, "price": 380, "compareAtPrice": null, "inStock": true },
+        { "id": "w-250", "label": "¼ كيلو", "grams": 250, "price": 185, "compareAtPrice": null, "inStock": true }
+
+      ]
+    },
+    {
+      "id": "p-mix-sport",
+      "title": "خلطة للرياضيين",
+      "description": "المكونات:\n1- عسل سدر جبلي ملكي\n2- غذاء ملكات\n3- حبوب اللقاح\n4- طلع نخل\n5- أشواجندا\n6- جنسنج أحمر كوري\n7- جذور الماكا",
+      "price": 700,
+      "compareAtPrice": null,
+      "currency": "EGP",
+      "categoryId": "c-mixes",
+      "tags": ["خلطات","خلطة","للرياضيين","الرياضيين"],
+      "images": ["imgs/mix/sport/sport.jpg"],
+      "thumbnail": "imgs/mix/sport/sport.jpg",
+      "status": "active",
+      "stockStatus":"in_stock",
+      "minOrderQty": 1,
+       
+      "featured":false,
+      "categorySortOrder": 3,
+       "sortOrderAll": 8,
+      "defaultWeightId": "w-1000",
+      "weights": [
+        { "id": "w-1000", "label": "1 كيلو",  "grams": 1000, "price": 1400, "compareAtPrice": null, "inStock": true },
+        { "id": "w-500", "label": "½ كيلو", "grams": 500, "price": 700, "compareAtPrice": null, "inStock": true , "default": true},
+        { "id": "w-250", "label": "¼ كيلو", "grams": 250, "price": 350, "compareAtPrice": null, "inStock": true }
+
+      ]
+    },
+    {
+      "id": "p-mix-marid",
+      "title": "خلطة للمتزوجين",
+      "description": "المكونات:\n1- عسل سدر جبلي ملكي\n2- غذاء ملكات\n3- حبوب اللقاح\n4- طلع نخل\n5- أشواجندا\n6- جنسنج أحمر كوري\n7- جذور الماكا\n8- قسط هندي\n9- زيت جرجير\n10- زيت حبة البركة",
+      "price": 700,
+      "compareAtPrice": null,
+      "currency": "EGP",
+      "categoryId": "c-mixes",
+      "tags": ["خلطات","خلطة","المتزوجين","للمتزوجين"],
+      "images": ["imgs/mix/marid/marid.jpg"],
+      "thumbnail": "imgs/mix/marid/marid.jpg",
+      "status": "active",
+      "stockStatus":"in_stock",
+      "minOrderQty": 1,
+       
+      "featured":true,
+      "featuredSortOrder": 3,
+      "categorySortOrder": 1,
+      
+      "sortOrderAll": 14,
+      "defaultWeightId": "w-1000",
+      "weights": [
+        { "id": "w-1000", "label": "1 كيلو",  "grams": 1000, "price": 700, "compareAtPrice": null, "inStock": true , "default": true},
+        { "id": "w-500", "label": "½ كيلو", "grams": 500, "price": 380, "compareAtPrice": null, "inStock": true },
+        { "id": "w-250", "label": "¼ كيلو", "grams": 250, "price": 185, "compareAtPrice": null, "inStock": true }
+
+      ]
+    },
+    {
+      "id": "p-mix-fertility",
+      "title": "خلطة للخصوبة والإنجاب",
+      "description": "المكونات:\n1- سدر جبلي ملكي\n2- غذاء ملكات\n3- حبوب اللقاح\n4- طلع النخيل\n5- جذور الماكا\n6- لبان دكر",
+      "price": 750,
+      "compareAtPrice": null,
+      "currency": "EGP",
+      "categoryId": "c-mixes",
+      "tags": ["خلطات","خلطة","الخصوبة","للخصوبة","الإنجاب","الانجاب"],
+      "images": ["imgs/mix/fertility/fertility.jpg"],
+      "thumbnail": "imgs/mix/fertility/fertility.jpg",
+      "status": "active",
+      "stockStatus":"in_stock",
+      "minOrderQty": 1,
+       
+      "featured":false,
+      "categorySortOrder": 2,
+      "sortOrderAll": 14,
+      "defaultWeightId": "w-1000",
+      "weights": [
+        { "id": "w-1000", "label": "1 كيلو",  "grams": 1000, "price": 750, "compareAtPrice": null, "inStock": true , "default": true},
+        { "id": "w-500", "label": "½ كيلو", "grams": 500, "price": 400, "compareAtPrice": null, "inStock": true },
+        { "id": "w-250", "label": "¼ كيلو", "grams": 250, "price": 200, "compareAtPrice": null, "inStock": true }
+
+      ]
+    },
+    {
+      "id": "p-others-woodensoon",
+      "title": "معلقة خشب",
+      "description": "",
+      "price": 10,
+      "compareAtPrice": null,
+      "currency": "EGP",
+      "categoryId": "c-others",
+      "tags": ["معلقة خشب"],
+      "images": ["imgs/others/wooden-soon/wooden-soon.jpeg"],
+      "thumbnail": "imgs/others/wooden-soon/wooden-soon.jpeg",
+      "status": "active",
+      "stockStatus":"in_stock",
+      "minOrderQty": 1,
+       
+      "featured":false,
+      "categorySortOrder": 1
+    },
+    {
+      "id": "p-others-honeydipper",
+      "title": "غرافة عسل",
+      "description": "",
+      "price": 10,
+      "compareAtPrice": null,
+      "currency": "EGP",
+      "categoryId": "c-others",
+      "tags": ["غرافة عسل"],
+      "images": ["imgs/others/honey-dipper/honey-dipper.jpeg"],
+      "thumbnail": "imgs/others/honey-dipper/honey-dipper.jpeg",
+      "status": "active",
+      "stockStatus":"in_stock",
+      "minOrderQty": 1,
+      "featured":false,
+      "categorySortOrder": 2
+    }
+  ]
+}

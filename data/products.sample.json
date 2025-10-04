@@ -1,0 +1,57 @@
+{
+  "currency": "EGP",
+  "categories": [
+    { "id": "c-phones", "name": "موبايلات" },
+    { "id": "c-accessories", "name": "اكسسوارات" }
+  ],
+  "products": [
+    {
+      "id": "p-0001",
+      "sku": "SKU-IPH-13-128",
+      "title": "iPhone 13",
+      "subtitle": "128GB - Midnight",
+      "description": "موبايل ممتاز بمعالج A15 وشاشة Super Retina XDR.",
+      "price": 29000,
+      "compareAtPrice": 31000,
+      "currency": "EGP",
+      "categoryId": "c-phones",
+      "tags": ["apple", "smartphone"],
+      "images": [
+        "imgs/iphone13-1.jpg",
+        "imgs/iphone13-2.jpg"
+      ],
+      "thumbnail": "imgs/iphone13-1.jpg",
+      "variants": [
+        {
+          "id": "v-0001",
+          "options": { "color": "Midnight", "storage": "128GB" },
+          "sku": "SKU-IPH-13-128-MID",
+          "price": 29000,
+          "compareAtPrice": 31000,
+          "stock": 7,
+          "barcode": null
+        },
+        {
+          "id": "v-0002",
+          "options": { "color": "Starlight", "storage": "256GB" },
+          "sku": "SKU-IPH-13-256-STR",
+          "price": 33500,
+          "compareAtPrice": 35500,
+          "stock": 3,
+          "barcode": null
+        }
+      ],
+      "optionsSchema": [
+        { "name": "color", "values": ["Midnight", "Starlight"] },
+        { "name": "storage", "values": ["128GB", "256GB"] }
+      ],
+      "stockPolicy": "deny",
+      "status": "active",
+      "rating": { "average": 4.7, "count": 128 },
+      "featured": true,
+      "discount": { "type": "percentage", "value": 5 },
+      "createdAt": "2025-09-14T12:00:00Z",
+      "updatedAt": "2025-09-14T12:00:00Z"
+    }
+  ]
+}
