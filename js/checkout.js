@@ -1,6 +1,9 @@
 (function(){
   const ITEMS_LIST = document.getElementById('cartItems');
   const SUBTOTAL_EL = document.getElementById('subtotal');
+  const PRODUCTS_DISCOUNT_EL = document.getElementById('productsDiscount');
+  const AFTER_PRODUCTS_EL = document.getElementById('afterProducts');
+  const SITE_DISCOUNT_EL = document.getElementById('siteDiscount');
   const SHIPPING_EL = document.getElementById('shipping');
   const GRAND_EL = document.getElementById('grandTotal');
   const PLACE_BTN = document.getElementById('placeOrder');
@@ -44,7 +47,7 @@
     document.body.classList.remove('modal-open');
   };
 
-  const priceFmt = (v)=> `${Number(v||0)} ج.م`;
+  const priceFmt = (v)=> `${Number(v||0).toFixed(2).replace(/\.00$/,'')} ج.م`;
   const SHIPPING_MESSAGE = 'سيتم تأكيد سعر التوصيل عند تأكيد الطلب';
   // Integrations
   const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwRCAKVryo7COCeoavO2BRGxD6805HhKYE-OOBXugY-MKYNxlRI-L68UXuPdUvP_cl8RA/exec'; // GAS Web App
@@ -82,11 +85,11 @@
     const ws = Array.isArray(product.weights) ? product.weights : [];
     return ws.find(w=> String(w.id)===String(variantId)) || null;
   };
-  // Detect and parse custom-per-unit variant ids like: productId::custom-g-500 or custom-ml-250
+  // Detect and parse custom-per-unit variant ids like: productId::custom-g-500 or custom-ml-250 or custom-l-1
   const parseCustom = (product, variantId)=>{
     const res = { isCustom:false, unit:null, amount:0, unitPrice:0 };
     if(!product || !variantId) return res;
-    const m = /^custom-(g|ml)-(\d+)$/.exec(String(variantId));
+    const m = /^custom-(g|ml|l)-(\d+)$/.exec(String(variantId));
     if(!m) return res;
     const unit = m[1];
     const amount = Number(m[2]||0);
@@ -104,6 +107,9 @@
     }else if(unit==='ml'){
       if(amount >= 1000) return `${(amount/1000)} لتر`;
       return `${amount} مل`;
+    }else if(unit==='l'){
+      // liters are integral or decimal? Our IDs carry integers. Display as `${amount} لتر`.
+      return `${amount} لتر`;
     }
     return `${amount}`;
   };
@@ -115,28 +121,53 @@
     return `${grams} جم`;
   };
 
-  const calcTotals = ()=>{
-    const subtotal = Object.entries(cartState).reduce((sum, [id,qty])=>{
-      const p = getProduct(id); if(!p) return sum;
-      const { variantId } = parseId(id);
-      const custom = parseCustom(p, variantId);
-      let price;
-      if(custom.isCustom){ price = custom.unitPrice; }
-      else{
-        const v = getVariant(p, variantId);
-        price = v ? Number(v.price||0) : Number(p.price||0);
+  const calcTotals = async ()=>{
+    const items = buildLineItems(cartState);
+    const totals = computeTotals(items);
+    // site-wide discount
+    const site = await getSiteDiscount();
+    const siteDiscount = (totals.afterProducts) * (site.pct/100);
+    const siteRow = SITE_DISCOUNT_EL ? SITE_DISCOUNT_EL.closest('.row') : null;
+    const grand = totals.afterProducts - siteDiscount;
+
+    SUBTOTAL_EL && (SUBTOTAL_EL.textContent = priceFmt(totals.totalBefore));
+    if(PRODUCTS_DISCOUNT_EL){
+      const row = PRODUCTS_DISCOUNT_EL.closest('.row');
+      if(totals.productsDiscount>0){
+        PRODUCTS_DISCOUNT_EL.textContent = `-${priceFmt(totals.productsDiscount)}`;
+        if(row) row.style.display = '';
+      } else {
+        if(row) row.style.display = 'none';
       }
-      return sum + price * (Number(qty)||0);
-    }, 0);
-    // لا نعرض قيمة للشحن الآن، ونستبعدها من الإجمالي حتى التأكيد
-    const shipping = 0;
-    const grand = subtotal;
-    SUBTOTAL_EL && (SUBTOTAL_EL.textContent = priceFmt(subtotal));
+    }
+    AFTER_PRODUCTS_EL && (AFTER_PRODUCTS_EL.textContent = priceFmt(totals.afterProducts));
+    if(SITE_DISCOUNT_EL){
+      // Update label text
+      if(siteRow && siteRow.firstElementChild){ siteRow.firstElementChild.textContent = site.label; }
+      if(site.pct>0 && siteDiscount>0){
+        SITE_DISCOUNT_EL.textContent = `-${priceFmt(siteDiscount)} (${site.pct}%)`;
+        if(siteRow) siteRow.style.display = '';
+      } else {
+        if(siteRow) siteRow.style.display = 'none';
+      }
+    }
     SHIPPING_EL && (SHIPPING_EL.textContent = SHIPPING_MESSAGE);
     GRAND_EL && (GRAND_EL.textContent = priceFmt(grand));
   };
 
   // ---- Build order payload helpers ----
+  // Detect per-product discount percent
+  const getProductDiscountPct = (p)=>{
+    const d = p && p.discount;
+    if(!d) return 0;
+    const type = String(d.type||'').toLowerCase();
+    const val = Number(d.value||0);
+    if(val<=0) return 0;
+    // accept both 'percent' and the misspelling 'precent'
+    if(type === 'percent' || type === 'precent') return Math.max(0, Math.min(100, val));
+    return 0;
+  };
+
   const buildLineItems = (state)=>{
     const items = [];
     Object.entries(state||{}).forEach(([id, qtyRaw])=>{
@@ -147,8 +178,11 @@
       const { variantId } = parseId(id);
       const custom = parseCustom(p, variantId);
       const v = custom.isCustom ? null : getVariant(p, variantId);
-      const unitPrice = custom.isCustom ? custom.unitPrice : (v ? Number(v.price||0) : Number(p.price||0));
-      const origUnitPrice = unitPrice; // no compareAt for custom; keep same
+      const baseUnit = custom.isCustom ? custom.unitPrice : (v ? Number(v.price||0) : Number(p.price||0));
+      const prodPct = getProductDiscountPct(p);
+      const discountedUnit = prodPct>0 ? (baseUnit * (1 - (prodPct/100))) : baseUnit;
+      const unitPrice = discountedUnit;
+      const origUnitPrice = baseUnit; // original before product discount
       items.push({
         id,
         baseId: p.id,
@@ -166,12 +200,25 @@
   };
 
   const computeTotals = (items)=>{
-    const totalBefore = items.reduce((a,it)=> a + (Number(it.lineTotalBefore)||0), 0);
-    const totalAfter = items.reduce((a,it)=> a + (Number(it.lineTotalAfter)||0), 0);
-    return { totalBefore, totalAfter };
+    const totalBefore = items.reduce((a,it)=> a + (Number(it.lineTotalBefore)||0), 0); // before product discounts
+    const afterProducts = items.reduce((a,it)=> a + (Number(it.lineTotalAfter)||0), 0); // after product discounts
+    const productsDiscount = totalBefore - afterProducts;
+    return { totalBefore, afterProducts, productsDiscount };
   };
 
-  const buildWhatsAppMessage = ({customer, items, totals, paymentMethod, orderId})=>{
+  async function getSiteDiscount(){
+    try{
+      if(!window.Discount || !window.Discount.getConfig) return { pct:0, label:'خصم الموقع' };
+      const cfg = await window.Discount.getConfig();
+      const now = new Date();
+      const active = cfg && cfg.active && (!cfg.start || now>=cfg.start) && (!cfg.end || now<=cfg.end) && Number(cfg.percentage)>0;
+      const pct = active ? Number(cfg.percentage) : 0;
+      const label = (cfg && cfg.discount_label && cfg.discount_label.trim()) ? cfg.discount_label.trim() : 'خصم الموقع';
+      return { pct, label };
+    }catch{ return { pct:0, label:'خصم الموقع' }; }
+  }
+
+  const buildWhatsAppMessage = ({customer, items, totals, paymentMethod, orderId, sitePct, siteLabel, siteDiscount, grand})=>{
     const lines = [];
     lines.push('طلب جديد من المتجر:');
     lines.push(`رقم الطلب: ${orderId}`);
@@ -184,18 +231,24 @@
     lines.push('تفاصيل المنتجات:');
     items.forEach((it, idx)=>{
       lines.push(`${idx+1}) ${it.title}`);
-      lines.push(`- السعر للوحدة: ${priceFmt(it.unitPrice)}  |  الكمية: ${it.qty}  |  الإجمالي: ${priceFmt(it.lineTotalAfter)}`);
-      if(it.origUnitPrice && it.origUnitPrice !== it.unitPrice){
-        lines.push(`- قبل الخصم: ${priceFmt(it.origUnitPrice)} × ${it.qty} = ${priceFmt(it.lineTotalBefore)}`);
+      lines.push(`- قبل الخصم: ${priceFmt(it.origUnitPrice)} × ${it.qty} = ${priceFmt(it.lineTotalBefore)}`);
+      if(it.origUnitPrice !== it.unitPrice){
+        const lineDisc = (it.lineTotalBefore - it.lineTotalAfter);
+        lines.push(`- خصم المنتج: -${priceFmt(lineDisc)}  |  بعد خصم المنتج: ${priceFmt(it.lineTotalAfter)}`);
+      } else {
+        lines.push(`- الإجمالي: ${priceFmt(it.lineTotalAfter)}`);
       }
     });
     lines.push('--------------------------');
-    lines.push(`الإجمالي قبل الخصم: ${priceFmt(totals.totalBefore)}`);
-    if(totals.totalBefore !== totals.totalAfter){
-      lines.push(`الإجمالي بعد الخصم: ${priceFmt(totals.totalAfter)}`);
-    }else{
-      lines.push(`الإجمالي: ${priceFmt(totals.totalAfter)}`);
+    lines.push(`الإجمالي قبل الخصومات: ${priceFmt(totals.totalBefore)}`);
+    const productsDiscount = totals.totalBefore - totals.afterProducts;
+    lines.push(`خصم المنتجات: -${priceFmt(productsDiscount)}`);
+    lines.push(`بعد خصم المنتجات: ${priceFmt(totals.afterProducts)}`);
+    if(sitePct>0 && siteDiscount>0){
+      const label = siteLabel || 'خصم الموقع';
+      lines.push(`${label} (${sitePct}%): -${priceFmt(siteDiscount)}`);
     }
+    lines.push(`الإجمالي النهائي: ${priceFmt(grand)}`);
     lines.push('--------------------------');
     lines.push('شكراً لكم');
     return lines.join('\n');
@@ -204,7 +257,7 @@
   // Detect if running on mobile device (basic heuristic)
   const isMobile = ()=> /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent || '');
 
-  const render = ()=>{
+  const render = async ()=>{
     if(!ITEMS_LIST) return;
     ITEMS_LIST.innerHTML = '';
     const ids = Object.keys(cartState);
@@ -213,7 +266,7 @@
       p.className = 'section-subtitle';
       p.textContent = 'سلتك فارغة حالياً.';
       ITEMS_LIST.appendChild(p);
-      calcTotals();
+      await calcTotals();
       return;
     }
     ids.forEach((id)=>{
@@ -221,14 +274,21 @@
       const { variantId } = parseId(id);
       const custom = parseCustom(p, variantId);
       const v = custom.isCustom ? null : getVariant(p, variantId);
-      const displayPrice = custom.isCustom ? custom.unitPrice : (v ? Number(v.price||0) : Number(p.price||0));
+      const baseUnit = custom.isCustom ? custom.unitPrice : (v ? Number(v.price||0) : Number(p.price||0));
+      const prodPct = getProductDiscountPct(p);
+      const discountedUnit = prodPct>0 ? (baseUnit * (1 - (prodPct/100))) : baseUnit;
       const li = document.createElement('li');
       li.className = 'cart-item';
       li.innerHTML = `
         <img class="thumb" src="${p.thumbnail || (p.images&&p.images[0]) || 'imgs/honey.jpeg'}" alt="${p.title}">
         <div class="meta">
           <div class="t">${p.title}${custom.isCustom ? ' - ' + unitLabelAny(custom.unit, custom.amount) : (v ? ' - ' + unitLabel(v.grams) : '')}</div>
-          <div class="pr">${priceFmt(displayPrice)}</div>
+          <div class="pr">
+            ${prodPct>0
+              ? `<span class="old" style="text-decoration:line-through;opacity:.7;margin-inline-start:6px;">${priceFmt(baseUnit)}</span>
+                 <strong class="new">${priceFmt(discountedUnit)}</strong>`
+              : `${priceFmt(baseUnit)}`}
+          </div>
         </div>
         <div class="qty">
           <button class="qbtn minus" aria-label="إنقاص">-</button>
@@ -312,6 +372,9 @@
     // Build items and totals
     const items = buildLineItems(cartState);
     const totals = computeTotals(items);
+    const sitePct = await getSiteDiscountPct();
+    const siteDiscount = totals.afterProducts * (sitePct/100);
+    const grand = totals.afterProducts - siteDiscount;
     const orderId = 'ORD-' + Math.random().toString(36).slice(2,8).toUpperCase() + '-' + Date.now().toString().slice(-5);
     const payload = {
       orderId,
@@ -319,8 +382,11 @@
       customer: { fullName, phone, address, city, email },
       paymentMethod,
       items,
-      totals,
-      site: location.href
+      totals: { totalBefore: totals.totalBefore, afterProducts: totals.afterProducts },
+      site: location.href,
+      sitePct,
+      siteDiscount,
+      grand
     };
 
     // Prepare WhatsApp text and copy to clipboard
