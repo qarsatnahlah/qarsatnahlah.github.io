@@ -372,7 +372,9 @@
     // Build items and totals
     const items = buildLineItems(cartState);
     const totals = computeTotals(items);
-    const sitePct = await getSiteDiscountPct();
+    const siteInfo = await getSiteDiscount();
+    const sitePct = Number(siteInfo.pct||0);
+    const siteLabel = siteInfo.label || 'خصم الموقع';
     const siteDiscount = totals.afterProducts * (sitePct/100);
     const grand = totals.afterProducts - siteDiscount;
     const orderId = 'ORD-' + Math.random().toString(36).slice(2,8).toUpperCase() + '-' + Date.now().toString().slice(-5);
@@ -385,6 +387,7 @@
       totals: { totalBefore: totals.totalBefore, afterProducts: totals.afterProducts },
       site: location.href,
       sitePct,
+      siteLabel,
       siteDiscount,
       grand
     };
@@ -397,16 +400,12 @@
     if(showWaNote()){
       const proceed = async ()=>{
         hideWaNote();
-        // Open WhatsApp
+        // Prepare WhatsApp URL
         const waUrl = isMobile()
           ? `whatsapp://send?phone=${WHATSAPP_NUMBER}&text=${encodeURIComponent(waText)}`
           : `https://api.whatsapp.com/send?phone=${WHATSAPP_NUMBER}&text=${encodeURIComponent(waText)}`;
-        try{
-          const w = window.open(waUrl, '_blank');
-          if(!w){ window.location.href = waUrl; }
-        }catch{ window.location.href = waUrl; }
 
-        // Send to Google Apps Script (saves to Sheets + email)
+        // Send to Google Apps Script (saves to Sheets + email) before navigating
         if(APPS_SCRIPT_URL && /\/exec$/.test(APPS_SCRIPT_URL) && !/REPLACE_WITH_YOUR_SCRIPT_ID/.test(APPS_SCRIPT_URL)){
           try{
             const fd = new FormData();
@@ -416,6 +415,9 @@
         } else {
           alert('لم يتم ضبط رابط Google Apps Script بعد. رجاءً ضع رابط الويب آب (المنتهي بـ /exec) في APPS_SCRIPT_URL داخل js/checkout.js لإرسال الإيميل تلقائيًا.');
         }
+
+        // Navigate to WhatsApp in the same tab to avoid popup blockers
+        window.location.href = waUrl;
       };
 
       // Ensure single binding
@@ -439,11 +441,8 @@
     const waUrl = isMobile()
       ? `whatsapp://send?phone=${WHATSAPP_NUMBER}&text=${encodeURIComponent(waText)}`
       : `https://api.whatsapp.com/send?phone=${WHATSAPP_NUMBER}&text=${encodeURIComponent(waText)}`;
-    try{
-      const w = window.open(waUrl, '_blank');
-      if(!w){ window.location.href = waUrl; }
-    }catch{ window.location.href = waUrl; }
 
+    // Send to Google Apps Script (saves to Sheets + email) before navigating
     if(APPS_SCRIPT_URL && /\/exec$/.test(APPS_SCRIPT_URL) && !/REPLACE_WITH_YOUR_SCRIPT_ID/.test(APPS_SCRIPT_URL)){
       try{
         const fd = new FormData();
@@ -453,6 +452,9 @@
     } else {
       alert('لم يتم ضبط رابط Google Apps Script بعد. رجاءً ضع رابط الويب آب (المنتهي بـ /exec) في APPS_SCRIPT_URL داخل js/checkout.js لإرسال الإيميل تلقائيًا.');
     }
+
+    // Navigate to WhatsApp in the same tab to avoid popup blockers
+    window.location.href = waUrl;
 
     // Optional: keep cart as is so العميل يراجع السلة لاحقاً
     // إن رغبت في التفريغ تلقائياً بعد الطلب، أزل التعليق:
