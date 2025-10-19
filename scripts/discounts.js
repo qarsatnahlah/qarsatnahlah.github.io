@@ -21,7 +21,9 @@
     }
     // Heuristic for GitHub Pages project sites: username.github.io/repo
     const pathParts = location.pathname.split('/').filter(Boolean);
-    if (location.hostname.endsWith('github.io') && pathParts.length > 0) {
+    // Only treat as project site if there are at least two segments, e.g. /repo/page or /repo/sub/...
+    // This avoids mis-detecting user sites on subpages like /cart.html
+    if (location.hostname.endsWith('github.io') && pathParts.length >= 2) {
       return '/' + pathParts[0] + '/';
     }
     return '/';
