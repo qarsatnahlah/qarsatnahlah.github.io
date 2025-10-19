@@ -4,12 +4,13 @@
     { "id": "c-honey", "name": "العسل" },
     { "id": "c-herbs", "name": "الأعشاب" },
     { "id": "c-oils", "name": "الزيوت" },
-    { "id": "c-mixes", "name": "الخلطات" }
+    { "id": "c-mixes", "name": "الخلطات" },
+    { "id": "c-others", "name": "منتجات أخرى" }
   ],
   "products": [
     {
       "id": "p-honey-mawleh",
-      "price":270,
+      "price": 350,
       "title": "عسل الموالح",
       "description": "عسل طبيعي نقي بطعم متوازن وغني بالفوائد.\nعسل الموالح غني بـ:\n -مضادات اكسدة\n-فايتمن سي \n -مفيد للمناعة والجهاز الهمضي ",
       "currency": "EGP",
@@ -20,16 +21,15 @@
       "status": "active",
       "stockStatus":"in_stock",
       "minOrderQty": 1,
-       
       "featured": false,
       "featuredSortOrder": 3,
       "categorySortOrder": 4,
       "sortOrderAll": 1,
       "defaultWeightId": "w-1000",
       "weights": [
-        { "id": "w-1000",  "label": "1 كيلو", "grams": 1000,  "price": 350, "compareAtPrice": null, "inStock": true , "default":true},
-        { "id": "w-500", "label": "½ كيلو", "grams": 500, "price": 185, "compareAtPrice": null,  "inStock": true },
-        { "id": "w-250", "label": "¼ كيلو", "grams": 250, "price": 90,  "compareAtPrice": null, "inStock": true }
+        { "id": "w-1000",  "label": "1 كيلو", "grams": 1000,  "price":350, "compareAtPrice": null, "inStock": true , "default":true},
+        { "id": "w-500", "label": "½ كيلو", "grams": 500, "price":185, "compareAtPrice": null,  "inStock": true },
+        { "id": "w-250", "label": "¼ كيلو", "grams": 250, "price": 95,  "compareAtPrice": null, "inStock": true }
       ]
     },
     {
@@ -37,7 +37,7 @@
       "sku": "SKU-HNY-SIDR-500",
       "title": "عسل سدر جبلي ملكي",
       "description": "عسل سدر جبلي فاخر بنكهة قوية ومميزة. \n الأفضل للمناعة والصحة العامة",
-      "price": 800,
+      "price": 950,
       "currency": "EGP",
       "categoryId": "c-honey",
       "tags": ["عسل", "السدر"],
@@ -48,6 +48,7 @@
       "categorySortOrder": 1,
       "sortOrderAll": 1,
       "status": "active",
+      "bestseller" : true ,
       "defaultWeightId": "w-1000",
       "weights": [
         { "id": "w-1000", "label": "1 كيلو",  "grams": 1000, "price": 950, "compareAtPrice": null, "inStock": true,"default":true },
@@ -60,7 +61,7 @@
       "sku": "SKU-HNY-ACA-500",
       "title": "عسل الشمر",
       "description": "- علاج فعّال للقولون والجهاز الهضمي\n- بديل طبيعي لعسل المانوكا\n- مدعوم بأبحاث علمية موثقة",
-      "price": 300,
+      "price": 400,
       "currency": "EGP",
       "categoryId": "c-honey",
       "tags": ["عسل", "أكاسيا"],
@@ -83,7 +84,7 @@
       "id": "p-honey-black-sead",
       "title": "عسل حبة البركة و اليانسون",
       "description": "النحلة تتغذى على رحيق زهرتين مختلفتين، مما يمنح العسل قيمة غذائية عالية.\nيُعد من أفضل أنواع العسل لعلاج مشاكل الجهاز التنفسي وتقوية المناعة.",
-      "price": 280,
+      "price": 400,
       "compareAtPrice": null,
       "currency": "EGP",
       "categoryId": "c-honey",
@@ -96,7 +97,7 @@
       "status": "active",
       "defaultWeightId": "w-1000",
       "weights": [
-        { "id": "w-1000", "label": "1 كيلو",  "grams": 1000, "price": 400, "compareAtPrice": null, "inStock": true , "default": true},
+        { "id": "w-1000", "label": "1 كيلو",  "grams": 1000, "price": 400, "compareAtPrice":null , "inStock": true , "default": true},
         { "id": "w-500",  "label": "½ كيلو", "grams": 500,  "price": 210, "compareAtPrice": null, "inStock": true },
         { "id": "w-250",  "label": "¼ كيلو", "grams": 250,  "price": 110, "compareAtPrice": null, "inStock": true }
       ]
@@ -145,6 +146,30 @@
         { "id": "w-1000", "label": "1 كيلو",  "grams": 1000, "price": 330, "compareAtPrice": null, "inStock": true , "default": true},
         { "id": "w-500",  "label": "½ كيلو", "grams": 500,  "price": 175, "compareAtPrice": null, "inStock": true },
         { "id": "w-250",  "label": "¼ كيلو", "grams": 250,  "price": 90, "compareAtPrice": null, "inStock": true }
+      ]
+    },
+    {
+      "id": "p-honey-sant",
+      "title": "عسل السنط",
+      "description": "- غني بمضادات الأكسدة الطبيعية\n- يساعد على تنظيم سكر الدم بشكل طبيعي\n- يخفف الالتهابات ويحسّن صحة الجهاز الهضمي\n- يسرّع التئام الجروح وتجديد الخلايا\n- يعزز مناعة الجسم "
+,
+      "price": 450,
+      "status": "active",
+      "categoryId": "c-honey",
+      "stockStatus":"in_stock",
+      "minOrderQty": 1,
+       
+      "featured": false,
+      "featuredSortOrder": 2,
+      "categorySortOrder": 6,
+      "sortOrderAll": 1,
+      "images": ["imgs/honey/sant/sant.jpg"],
+      "thumbnail": "imgs/honey/sant/sant.jpg",
+      "defaultWeightId": "w-1000",
+      "weights": [
+        { "id": "w-1000", "label": "1 كيلو",  "grams": 1000, "price": 450, "compareAtPrice": null, "inStock": true , "default": true},
+        { "id": "w-500",  "label": "½ كيلو", "grams": 500,  "price": 235, "compareAtPrice": null, "inStock": true },
+        { "id": "w-250",  "label": "¼ كيلو", "grams": 250,  "price": 120, "compareAtPrice": null, "inStock": true }
       ]
     },
     {
@@ -203,7 +228,6 @@
     "categoryId": "c-herbs",
     "stockStatus":"in_stock",
     "minOrderQty": 1,
-     
     "featured": false,
     "featuredSortOrder": 3,
     "categorySortOrder": 2,
@@ -803,8 +827,8 @@
       "currency": "EGP",
       "categoryId": "c-oils",
       "tags": ["زيوت", "الجرجير"],
-      "images": ["imgs/oils/arugula-oil/arugula-oil.jpg"],
-      "thumbnail": "imgs/oils/arugula-oil/arugula-oil.jpg",
+      "images": ["imgs/oils/arugula-oil/arugula-oil.png"],
+      "thumbnail": "imgs/oils/arugula-oil/arugula-oil.png",
       "status": "active",
       "stockStatus":"in_stock",
       "minOrderQty": 1,
@@ -1140,11 +1164,10 @@
       "status": "active",
       "stockStatus":"in_stock",
       "minOrderQty": 1,
-       
       "featured":true,
       "featuredSortOrder": 3,
       "categorySortOrder": 1,
-      
+      "bestseller" : true ,
       "sortOrderAll": 14,
       "defaultWeightId": "w-1000",
       "weights": [
