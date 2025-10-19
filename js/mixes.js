@@ -99,11 +99,25 @@
         img.fetchPriority = 'low';
         a.appendChild(img);
 
+        // badges container (stacked)
+        const badgesBox = el('div','product-badges');
+        a.appendChild(badgesBox);
+
         (function renderBadges(){
           const isOut = (p.stockStatus === 'out_of_stock') || (typeof p.stockQuantity === 'number' && p.stockQuantity <= 0);
-          const add = (text, cls='product-badge product-badge--new')=>{ const b = el('span', cls); b.textContent = text; a.appendChild(b); };
+          const add = (text, cls='product-badge product-badge--new')=>{ const b = el('span', cls); b.textContent = text; badgesBox.appendChild(b); };
           if(isOut){ add('غير متوفر حاليا', 'product-badge product-badge--oos'); return; }
-          if(p.discount && p.discount.type === 'percentage' && typeof p.discount.value === 'number') add(`${p.discount.value}%`, 'product-badge product-badge--sale');
+          const typeOk = (t)=> ['percentage','percent','precent'].includes(String(t||'').toLowerCase());
+          let pct = (p.discount && typeOk(p.discount.type) && typeof p.discount.value==='number') ? Number(p.discount.value) : 0;
+          if(!pct && Array.isArray(p.weights) && p.weights.length){
+            const ws = p.weights; let primary = null;
+            if(p.defaultWeightId) primary = ws.find(w=> String(w.id)===String(p.defaultWeightId)) || null;
+            if(!primary) primary = ws.find(w=> w && w.default===true) || null;
+            if(!primary) primary = ws.find(w=> w && w.inStock!==false) || null;
+            if(!primary) primary = ws[0];
+            if(primary && primary.discount && typeOk(primary.discount.type) && typeof primary.discount.value==='number') pct = Number(primary.discount.value)||0;
+          }
+          if(pct>0) add(`${pct}%`, 'product-badge product-badge--sale');
           if(p.newArrival) add('جديد');
           if(p.bestseller) add('الأكثر مبيعاً');
           if(p.limitedEdition) add('إصدار محدود');
