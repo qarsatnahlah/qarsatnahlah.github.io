@@ -27,9 +27,9 @@
       "sortOrderAll": 1,
       "defaultWeightId": "w-1000",
       "weights": [
-        { "id": "w-1000",  "label": "1 كيلو", "grams": 1000,  "price": 270, "compareAtPrice": null, "inStock": true , "default":true},
-        { "id": "w-500", "label": "½ كيلو", "grams": 500, "price": 145, "compareAtPrice": null,  "inStock": true },
-        { "id": "w-250", "label": "¼ كيلو", "grams": 250, "price": 80,  "compareAtPrice": null, "inStock": true }
+        { "id": "w-1000",  "label": "1 كيلو", "grams": 1000,  "price": 350, "compareAtPrice": null, "inStock": true , "default":true},
+        { "id": "w-500", "label": "½ كيلو", "grams": 500, "price": 185, "compareAtPrice": null,  "inStock": true },
+        { "id": "w-250", "label": "¼ كيلو", "grams": 250, "price": 90,  "compareAtPrice": null, "inStock": true }
       ]
     },
     {
@@ -50,9 +50,9 @@
       "status": "active",
       "defaultWeightId": "w-1000",
       "weights": [
-        { "id": "w-1000", "label": "1 كيلو",  "grams": 1000, "price": 800, "compareAtPrice": null, "inStock": true,"default":true },
-        { "id": "w-500",  "label": "½ كيلو", "grams": 500,  "price": 430, "compareAtPrice": null, "inStock": true },
-        { "id": "w-250",  "label": "¼ كيلو", "grams": 250,  "price": 220, "compareAtPrice": null, "inStock": true }
+        { "id": "w-1000", "label": "1 كيلو",  "grams": 1000, "price": 950, "compareAtPrice": null, "inStock": true,"default":true },
+        { "id": "w-500",  "label": "½ كيلو", "grams": 500,  "price": 485, "compareAtPrice": null, "inStock": true },
+        { "id": "w-250",  "label": "¼ كيلو", "grams": 250,  "price": 245, "compareAtPrice": null, "inStock": true }
       ]
     },
     { 
@@ -74,9 +74,9 @@
       "status": "active",
       "defaultWeightId": "w-1000",
       "weights": [
-        { "id": "w-1000", "label": "1 كيلو",  "grams": 1000, "price": 300, "compareAtPrice": null, "inStock": true },
-        { "id": "w-500",  "label": "½ كيلو", "grams": 500,  "price": 160, "compareAtPrice": null, "inStock": true },
-        { "id": "w-250",  "label": "¼ كيلو", "grams": 250,  "price": 90,  "compareAtPrice": null, "inStock": true }
+        { "id": "w-1000", "label": "1 كيلو",  "grams": 1000, "price": 400, "compareAtPrice": null, "inStock": true },
+        { "id": "w-500",  "label": "½ كيلو", "grams": 500,  "price": 210, "compareAtPrice": null, "inStock": true },
+        { "id": "w-250",  "label": "¼ كيلو", "grams": 250,  "price": 110,  "compareAtPrice": null, "inStock": true }
       ]
     },
     { 
@@ -96,9 +96,9 @@
       "status": "active",
       "defaultWeightId": "w-1000",
       "weights": [
-        { "id": "w-1000", "label": "1 كيلو",  "grams": 1000, "price": 280, "compareAtPrice": null, "inStock": true , "default": true},
-        { "id": "w-500",  "label": "½ كيلو", "grams": 500,  "price": 150, "compareAtPrice": null, "inStock": true },
-        { "id": "w-250",  "label": "¼ كيلو", "grams": 250,  "price": 90, "compareAtPrice": null, "inStock": true }
+        { "id": "w-1000", "label": "1 كيلو",  "grams": 1000, "price": 400, "compareAtPrice": null, "inStock": true , "default": true},
+        { "id": "w-500",  "label": "½ كيلو", "grams": 500,  "price": 210, "compareAtPrice": null, "inStock": true },
+        { "id": "w-250",  "label": "¼ كيلو", "grams": 250,  "price": 110, "compareAtPrice": null, "inStock": true }
       ]
     },
     {
@@ -119,9 +119,9 @@
       "thumbnail": "imgs/honey/bardagosh/bardagosh.jpg",
       "defaultWeightId": "w-1000",
       "weights": [
-        { "id": "w-1000", "label": "1 كيلو",  "grams": 1000, "price": 300, "compareAtPrice": null, "inStock": true , "default": true},
-        { "id": "w-500",  "label": "½ كيلو", "grams": 500,  "price": 160, "compareAtPrice": null, "inStock": true },
-        { "id": "w-250",  "label": "¼ كيلو", "grams": 250,  "price": 90, "compareAtPrice": null, "inStock": true }
+        { "id": "w-1000", "label": "1 كيلو",  "grams": 1000, "price": 400, "compareAtPrice": null, "inStock": true , "default": true},
+        { "id": "w-500",  "label": "½ كيلو", "grams": 500,  "price": 210, "compareAtPrice": null, "inStock": true },
+        { "id": "w-250",  "label": "¼ كيلو", "grams": 250,  "price": 110, "compareAtPrice": null, "inStock": true }
       ]
     },
     {
@@ -142,9 +142,9 @@
       "thumbnail": "imgs/honey/barseam/barseam.jpg",
       "defaultWeightId": "w-1000",
       "weights": [
-        { "id": "w-1000", "label": "1 كيلو",  "grams": 1000, "price": 260, "compareAtPrice": null, "inStock": true , "default": true},
-        { "id": "w-500",  "label": "½ كيلو", "grams": 500,  "price": 140, "compareAtPrice": null, "inStock": true },
-        { "id": "w-250",  "label": "¼ كيلو", "grams": 250,  "price": 75, "compareAtPrice": null, "inStock": true }
+        { "id": "w-1000", "label": "1 كيلو",  "grams": 1000, "price": 330, "compareAtPrice": null, "inStock": true , "default": true},
+        { "id": "w-500",  "label": "½ كيلو", "grams": 500,  "price": 175, "compareAtPrice": null, "inStock": true },
+        { "id": "w-250",  "label": "¼ كيلو", "grams": 250,  "price": 90, "compareAtPrice": null, "inStock": true }
       ]
     },
     {
