@@ -76,7 +76,7 @@
       img.fetchPriority = 'low';
       a.appendChild(img);
 
-      if(p.discount && p.discount.type === 'percentage' && typeof p.discount.value === 'number'){
+      if(p.discount && ['percentage','percent','precent'].includes(String(p.discount.type||'').toLowerCase()) && typeof p.discount.value === 'number'){
         const sale = el('span','product-badge product-badge--sale'); sale.textContent = `${p.discount.value}%`; a.appendChild(sale);
       } else if(p.newArrival){
         const badge = el('span','product-badge product-badge--new'); badge.textContent = 'جديد'; a.appendChild(badge);
