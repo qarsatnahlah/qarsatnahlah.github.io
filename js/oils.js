@@ -104,7 +104,17 @@
           // 2) Group: New + Bestseller + Discount (together)
           if(p.newArrival) add('جديد');
           if(p.bestseller) add('الأكثر مبيعاً');
-          if(p.discount && p.discount.type === 'percentage' && typeof p.discount.value === 'number') add(`${p.discount.value}%`, 'product-badge product-badge--sale');
+          const typeOk = (t)=> ['percentage','percent','precent'].includes(String(t||'').toLowerCase());
+          let pct = (p.discount && typeOk(p.discount.type) && typeof p.discount.value==='number') ? Number(p.discount.value) : 0;
+          if(!pct && Array.isArray(p.weights) && p.weights.length){
+            const ws = p.weights; let primary = null;
+            if(p.defaultWeightId) primary = ws.find(w=> String(w.id)===String(p.defaultWeightId)) || null;
+            if(!primary) primary = ws.find(w=> w && w.default===true) || null;
+            if(!primary) primary = ws.find(w=> w && w.inStock!==false) || null;
+            if(!primary) primary = ws[0];
+            if(primary && primary.discount && typeOk(primary.discount.type) && typeof primary.discount.value==='number') pct = Number(primary.discount.value)||0;
+          }
+          if(pct>0) add(`${pct}%`, 'product-badge product-badge--sale');
           // 3) PreOrder
           if(p.preOrder) add('طلب مسبق');
           // 4) Remaining
@@ -186,10 +196,10 @@
           const cpUnit = String(p.customPricing.unit||'').toLowerCase();
           const row = el('div','card-custom-row');
           const help = el('p','card-custom-help');
-          const noun = (cpUnit==='ml') ? 'المللي' : 'الجرام';
+          const noun = (cpUnit==='ml') ? 'المللي' : (cpUnit==='l' ? 'اللتر' : 'الجرام');
           help.innerHTML = `سعر ${noun}: <b>${p.customPricing.pricePerUnit} ج.م</b>`;
           row.appendChild(help);
-          const cpLabel = p.customPricing.label || (cpUnit==='ml' ? 'تحديد المللي' : 'تحديد الجرامات');
+          const cpLabel = p.customPricing.label || (cpUnit==='ml' ? 'تحديد المللي' : (cpUnit==='l' ? 'تحديد اللتر' : 'تحديد الجرامات'));
           const cpBtn = el('a','weight-option weight-option--custom weight-option--sm');
           cpBtn.href = `product.html?id=${encodeURIComponent(p.id)}&custom=1`;
           cpBtn.setAttribute('aria-label', cpLabel);
