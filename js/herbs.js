@@ -103,7 +103,17 @@
           // 2) Group: New + Bestseller + Discount (together)
           if(p.newArrival) add('جديد');
           if(p.bestseller) add('الأكثر مبيعاً');
-          if(p.discount && p.discount.type === 'percentage' && typeof p.discount.value === 'number') add(`${p.discount.value}%`, 'product-badge product-badge--sale');
+          const typeOk = (t)=> ['percentage','percent','precent'].includes(String(t||'').toLowerCase());
+          let pct = (p.discount && typeOk(p.discount.type) && typeof p.discount.value==='number') ? Number(p.discount.value) : 0;
+          if(!pct && Array.isArray(p.weights) && p.weights.length){
+            const ws = p.weights; let primary = null;
+            if(p.defaultWeightId) primary = ws.find(w=> String(w.id)===String(p.defaultWeightId)) || null;
+            if(!primary) primary = ws.find(w=> w && w.default===true) || null;
+            if(!primary) primary = ws.find(w=> w && w.inStock!==false) || null;
+            if(!primary) primary = ws[0];
+            if(primary && primary.discount && typeOk(primary.discount.type) && typeof primary.discount.value==='number') pct = Number(primary.discount.value)||0;
+          }
+          if(pct>0) add(`${pct}%`, 'product-badge product-badge--sale');
           // 3) PreOrder
           if(p.preOrder) add('طلب مسبق');
           // 4) Remaining
