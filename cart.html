@@ -21,6 +21,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/discounts.css">
   <link rel="icon" type="image/x-icon" href="imgs/logo.ico">
 </head>
 <body>
@@ -92,7 +93,10 @@
           <h2 class="checkout-card__title">ملخص الطلب</h2>
           <ul id="cartItems" class="cart-items"></ul>
           <div class="cart-totals">
-            <div class="row"><span>المجموع الفرعي</span><span id="subtotal">0 ج.م</span></div>
+            <div class="row"><span>الإجمالي قبل الخصومات</span><span id="subtotal">0 ج.م</span></div>
+            <div class="row"><span>خصم المنتجات</span><span id="productsDiscount">0 ج.م</span></div>
+            <div class="row"><span>بعد خصم المنتجات</span><span id="afterProducts">0 ج.م</span></div>
+            <div class="row"><span>خصم الموقع</span><span id="siteDiscount">0 ج.م</span></div>
             <div class="row"><span>الشحن</span><span id="shipping">0 ج.م</span></div>
             <div class="row total"><span>المجموع الكلي</span><span id="grandTotal">0 ج.م</span></div>
           </div>
@@ -230,5 +234,6 @@
   <script src="js/script.js"></script>
   <script src="js/cart.js"></script>
   <script src="js/checkout.js"></script>
+  <script src="scripts/discounts.js" defer></script>
 </body>
 </html>
