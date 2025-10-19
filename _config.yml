@@ -1,0 +1,26 @@
+title: "قرصة نحلة"
+lang: ar
+url: "https://qarsatnahlah.github.io"
+baseurl: ""
+markdown: kramdown
+timezone: Africa/Cairo
+
+# Build settings
+exclude:
+  - README.md
+  - node_modules
+  - package.json
+  - package-lock.json
+  - .github
+  - scripts/generate-sitemap.js
+  - .gitignore
+
+# Defaults for pages
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: default
+      dir: rtl
+      lang: ar
