@@ -208,7 +208,7 @@
           // 2) Group: New + Bestseller + Discount (together)
           if(p.newArrival) add('جديد');
           if(p.bestseller) add('الأكثر مبيعاً');
-          if(p.discount && p.discount.type === 'percentage' && typeof p.discount.value === 'number') add(`${p.discount.value}%`, 'product-badge product-badge--sale');
+          if(p.discount && ['percentage','percent','precent'].includes(String(p.discount.type||'').toLowerCase()) && typeof p.discount.value === 'number') add(`${p.discount.value}%`, 'product-badge product-badge--sale');
           // 3) PreOrder
           if(p.preOrder) add('طلب مسبق');
           // 4) Remaining
