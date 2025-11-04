@@ -1,5 +1,5 @@
 {
-  "discount_active": true,
+  "discount_active": false,
   "discount_percentage": 10,
   "discount_message": "بمناسبة افتتاح الموقع🎉 \nخصم 15% على كل الفواتير 🎉",
   "theme_color": "#4CAF50",
